@@ -6,13 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Santino Spingola — Automation & AI Integration Specialist. San Isidro, Buenos Aires.">
+  <meta name="theme-color" content="#F9F2EE">
   <title>Santino Spingola — Automation & AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@400;500&display=swap">
   <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;700&family=DM+Sans:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -22,16 +21,17 @@
   <div class="scroll-bar" id="scroll-bar"></div>
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursor-ring"></div>
+  <div class="grain" aria-hidden="true"></div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <a href="#hero" class="logo">SS<span>.</span></a>
+    <a href="#hero" class="logo">Santino<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#about">SISTEMA</a></li>
-      <li><a href="#stack">STACK</a></li>
-      <li><a href="#experience">EXPERIENCIA</a></li>
-      <li><a href="#certifications">CERTS</a></li>
-      <li><a href="#contact" class="nav-cta">CONTACTO</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#experience">Experiencia</a></li>
+      <li><a href="#certifications">Certificaciones</a></li>
+      <li><a href="#contact" class="nav-cta">Contacto</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Abrir menú">
       <span></span><span></span><span></span>
@@ -39,36 +39,36 @@
   </nav>
 
   <div class="mobile-nav" id="mobile-nav">
-    <a href="#about" class="mob-link">// SISTEMA</a>
-    <a href="#stack" class="mob-link">// STACK</a>
-    <a href="#experience" class="mob-link">// EXPERIENCIA</a>
-    <a href="#certifications" class="mob-link">// CERTS</a>
-    <a href="#contact" class="mob-link">// CONTACTO</a>
+    <a href="#about" class="mob-link">Sobre mí</a>
+    <a href="#stack" class="mob-link">Stack</a>
+    <a href="#experience" class="mob-link">Experiencia</a>
+    <a href="#certifications" class="mob-link">Certificaciones</a>
+    <a href="#contact" class="mob-link">Contacto</a>
   </div>
 
   <!-- HERO -->
-  <section class="hero" id="hero">
+  <header class="hero" id="hero">
     <div class="wrap">
 
-      <div class="hero-eyebrow">
+      <div class="hero-eyebrow reveal in">
         <span class="live-dot"></span>
-        <span class="live-label">DISPONIBLE PARA PROYECTOS B2B</span>
+        <span class="live-label">Disponible para proyectos B2B</span>
       </div>
 
-      <div class="hero-names">
-        <span class="name-solid">SANTINO</span>
-        <span class="name-outline">SPINGOLA</span>
-      </div>
+      <h1 class="hero-names">
+        <span class="name-line">Santino</span>
+        <span class="name-line name-accent">Spingola</span>
+      </h1>
 
       <div class="hero-row">
         <div class="hero-left">
-          <p class="hero-role">AUTOMATION &amp; AI INTEGRATION SPECIALIST</p>
-          <p class="hero-loc">[ SAN ISIDRO, BA, ARG ]</p>
+          <p class="hero-role">Automation &amp; AI Integration Specialist</p>
+          <p class="hero-loc">San Isidro · Buenos Aires · Argentina</p>
           <p class="hero-desc">Diseño arquitecturas donde CRMs, ERPs, plataformas de mensajería y agentes AI trabajan
-            como un ecosistema unificado.</p>
+            como <em>un solo ecosistema</em>.</p>
           <div class="hero-btns">
-            <a href="#contact" class="btn-orange">INICIAR PROYECTO</a>
-            <a href="#experience" class="btn-ghost">VER TRABAJO</a>
+            <a href="#contact" class="btn-primary">Iniciar proyecto<span class="btn-arrow">→</span></a>
+            <a href="#experience" class="btn-ghost">Ver trabajo</a>
           </div>
         </div>
 
@@ -82,54 +82,54 @@
       </div>
 
     </div>
-  </section>
+  </header>
 
   <!-- TICKER -->
   <div class="ticker-wrap" aria-hidden="true">
     <div class="ticker">
-      <span>n8n</span><span class="sep">◆</span>
-      <span>Bitrix24</span><span class="sep">◆</span>
-      <span>Claude API</span><span class="sep">◆</span>
-      <span>WhatsApp Business API</span><span class="sep">◆</span>
-      <span>Chatwoot</span><span class="sep">◆</span>
-      <span>ManyChat</span><span class="sep">◆</span>
-      <span>Node.js</span><span class="sep">◆</span>
-      <span>Python</span><span class="sep">◆</span>
-      <span>SOAP/WSDL</span><span class="sep">◆</span>
-      <span>REST APIs</span><span class="sep">◆</span>
-      <span>GPT-4o</span><span class="sep">◆</span>
-      <span>Webhooks</span><span class="sep">◆</span>
-      <span>Linux VPS</span><span class="sep">◆</span>
-      <span>EspoCRM</span><span class="sep">◆</span>
-      <span>SQL</span><span class="sep">◆</span>
-      <span>RAG</span><span class="sep">◆</span>
+      <span>n8n</span><span class="sep">✦</span>
+      <span>Bitrix24</span><span class="sep">✦</span>
+      <span>Claude API</span><span class="sep">✦</span>
+      <span>WhatsApp Business API</span><span class="sep">✦</span>
+      <span>Chatwoot</span><span class="sep">✦</span>
+      <span>ManyChat</span><span class="sep">✦</span>
+      <span>Node.js</span><span class="sep">✦</span>
+      <span>Python</span><span class="sep">✦</span>
+      <span>SOAP/WSDL</span><span class="sep">✦</span>
+      <span>REST APIs</span><span class="sep">✦</span>
+      <span>GPT-4o</span><span class="sep">✦</span>
+      <span>Webhooks</span><span class="sep">✦</span>
+      <span>Linux VPS</span><span class="sep">✦</span>
+      <span>EspoCRM</span><span class="sep">✦</span>
+      <span>SQL</span><span class="sep">✦</span>
+      <span>RAG</span><span class="sep">✦</span>
       <!-- duplicate for seamless loop -->
-      <span>n8n</span><span class="sep">◆</span>
-      <span>Bitrix24</span><span class="sep">◆</span>
-      <span>Claude API</span><span class="sep">◆</span>
-      <span>WhatsApp Business API</span><span class="sep">◆</span>
-      <span>Chatwoot</span><span class="sep">◆</span>
-      <span>ManyChat</span><span class="sep">◆</span>
-      <span>Node.js</span><span class="sep">◆</span>
-      <span>Python</span><span class="sep">◆</span>
-      <span>SOAP/WSDL</span><span class="sep">◆</span>
-      <span>REST APIs</span><span class="sep">◆</span>
-      <span>GPT-4o</span><span class="sep">◆</span>
-      <span>Webhooks</span><span class="sep">◆</span>
-      <span>Linux VPS</span><span class="sep">◆</span>
-      <span>EspoCRM</span><span class="sep">◆</span>
-      <span>SQL</span><span class="sep">◆</span>
-      <span>RAG</span><span class="sep">◆</span>
+      <span>n8n</span><span class="sep">✦</span>
+      <span>Bitrix24</span><span class="sep">✦</span>
+      <span>Claude API</span><span class="sep">✦</span>
+      <span>WhatsApp Business API</span><span class="sep">✦</span>
+      <span>Chatwoot</span><span class="sep">✦</span>
+      <span>ManyChat</span><span class="sep">✦</span>
+      <span>Node.js</span><span class="sep">✦</span>
+      <span>Python</span><span class="sep">✦</span>
+      <span>SOAP/WSDL</span><span class="sep">✦</span>
+      <span>REST APIs</span><span class="sep">✦</span>
+      <span>GPT-4o</span><span class="sep">✦</span>
+      <span>Webhooks</span><span class="sep">✦</span>
+      <span>Linux VPS</span><span class="sep">✦</span>
+      <span>EspoCRM</span><span class="sep">✦</span>
+      <span>SQL</span><span class="sep">✦</span>
+      <span>RAG</span><span class="sep">✦</span>
     </div>
   </div>
 
   <!-- ABOUT -->
-  <section class="section bg-surface" id="about">
+  <section class="section" id="about">
     <div class="wrap">
-      <p class="sec-label"><span class="orange">// 01</span> SOBRE EL SISTEMA</p>
+      <p class="sec-label"><span class="num">01</span> Sobre mí</p>
       <div class="about-grid">
         <div class="reveal">
-          <h2 class="sec-title">Automatización.<br>Integración.<br>Impacto real.</h2>
+          <h2 class="sec-title">Automatización.<br>Integración.<br><em>Impacto real.</em></h2>
           <p class="body-txt">Especialista en automatización e integración de sistemas con experiencia real en empresas
             medianas y grandes de Argentina y LATAM. Diseño arquitecturas donde CRMs, ERPs, plataformas de mensajería y
             agentes AI trabajan como un ecosistema unificado.</p>
@@ -139,15 +139,15 @@
         <div class="stats reveal">
           <div class="stat">
             <span class="stat-n" data-to="1">0</span>
-            <span class="stat-lbl">PROYECTOS ACTIVO</span>
+            <span class="stat-lbl">Proyecto activo</span>
           </div>
           <div class="stat">
             <span class="stat-n" data-to="7">0</span>
-            <span class="stat-lbl">PROYECTOS TERMINADOS</span>
+            <span class="stat-lbl">Proyectos terminados</span>
           </div>
           <div class="stat">
             <div class="stat-num"><span class="stat-n" data-to="1">0</span><span class="stat-sfx">+</span></div>
-            <span class="stat-lbl">AÑOS DE EXPERIENCIA</span>
+            <span class="stat-lbl">Años de experiencia</span>
           </div>
         </div>
       </div>
@@ -155,34 +155,34 @@
   </section>
 
   <!-- STACK -->
-  <section class="section" id="stack">
+  <section class="section bg-surface" id="stack">
     <div class="wrap">
-      <p class="sec-label"><span class="orange">// 02</span> STACK TECNOLÓGICO</p>
-      <h2 class="sec-title reveal">HERRAMIENTAS<br>EN MI STACK</h2>
+      <p class="sec-label"><span class="num">02</span> Stack tecnológico</p>
+      <h2 class="sec-title reveal">Herramientas<br><em>en mi stack</em></h2>
       <div class="stack-grid">
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">AUTOMATIZACIÓN</h3>
+          <h3 class="cat-lbl">Automatización</h3>
           <div class="pills">
             <span class="pill">n8n</span><span class="pill">Webhooks</span>
             <span class="pill">REST APIs</span><span class="pill">SOAP/WSDL</span>
           </div>
         </div>
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">CRM &amp; CONTACT CENTER</h3>
+          <h3 class="cat-lbl">CRM &amp; Contact Center</h3>
           <div class="pills">
             <span class="pill">Bitrix24</span><span class="pill">Chatwoot</span>
             <span class="pill">EspoCRM</span>
           </div>
         </div>
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">MENSAJERÍA</h3>
+          <h3 class="cat-lbl">Mensajería</h3>
           <div class="pills">
             <span class="pill">WhatsApp Business API</span>
             <span class="pill">ManyChat</span>
           </div>
         </div>
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">AI &amp; AGENTES</h3>
+          <h3 class="cat-lbl">AI &amp; Agentes</h3>
           <div class="pills">
             <span class="pill pill-o">Claude API</span>
             <span class="pill pill-o">GPT-4o</span>
@@ -191,14 +191,14 @@
           </div>
         </div>
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">DESARROLLO</h3>
+          <h3 class="cat-lbl">Desarrollo</h3>
           <div class="pills">
             <span class="pill">Node.js</span><span class="pill">Python</span>
             <span class="pill">JavaScript</span>
           </div>
         </div>
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">INFRAESTRUCTURA</h3>
+          <h3 class="cat-lbl">Infraestructura</h3>
           <div class="pills">
             <span class="pill">Hostinger VPS</span>
             <span class="pill">Linux</span><span class="pill">SQL</span>
@@ -209,10 +209,10 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section class="section bg-surface" id="experience">
+  <section class="section" id="experience">
     <div class="wrap">
-      <p class="sec-label"><span class="orange">// 03</span> EXPERIENCIA</p>
-      <h2 class="sec-title reveal">HISTORIAL<br>DE EJECUCIÓN</h2>
+      <p class="sec-label"><span class="num">03</span> Experiencia</p>
+      <h2 class="sec-title reveal">Experiencia<br><em>y proyectos</em></h2>
       <div class="tl">
 
         <div class="tl-item reveal">
@@ -225,7 +225,7 @@
                 <h3 class="tl-role">Especialista en Automatización &amp; AI</h3>
                 <p class="tl-co">Argensys IT Services S.R.L</p>
               </div>
-              <span class="tl-date">ABR 2025 — PRESENTE</span>
+              <span class="tl-date">Abr 2025 — Presente</span>
             </div>
 
             <div class="tl-projs">
@@ -298,22 +298,22 @@
   <!-- CERTIFICATIONS -->
   <section class="section bg-surface" id="certifications">
     <div class="wrap">
-      <p class="sec-label"><span class="orange">// 04</span> CERTIFICACIONES</p>
+      <p class="sec-label"><span class="num">04</span> Certificaciones</p>
       <div class="cert-top reveal">
         <div>
           <div class="anth-badge">
             <span class="anth-icon">⬡</span>
             <div>
-              <span class="anth-name">ANTHROPIC ACADEMY</span>
+              <span class="anth-name">Anthropic Academy</span>
               <span class="anth-sub">2025 — 2026</span>
             </div>
           </div>
-          <h2 class="sec-title" style="margin-bottom:0">CERTIFICACIONES<br>EN CURSO</h2>
+          <h2 class="sec-title" style="margin-bottom:0">Certificaciones<br><em>en curso</em></h2>
         </div>
         <div class="prog-wrap">
           <div class="prog-lbl">
-            <span class="mono-sm gray">PROGRESO DEL SISTEMA</span>
-            <span class="mono-sm lime" id="prog-count">— / 13</span>
+            <span class="mono-sm muted">Progreso</span>
+            <span class="mono-sm accent" id="prog-count">— / 13</span>
           </div>
           <div class="prog-track">
             <div class="prog-bar" id="prog-bar"></div>
@@ -327,7 +327,7 @@
   <!-- EDUCATION -->
   <section class="section" id="education">
     <div class="wrap">
-      <p class="sec-label"><span class="orange">// 05</span> FORMACIÓN</p>
+      <p class="sec-label"><span class="num">05</span> Formación</p>
       <div class="edu-grid reveal">
         <div class="edu-card">
           <span class="edu-yr">2024</span>
@@ -351,17 +351,18 @@
   <!-- CONTACT -->
   <section class="section contact-sec" id="contact">
     <div class="wrap">
-      <p class="sec-label"><span class="orange">// 06</span> CONTACTO</p>
+      <p class="sec-label dark"><span class="num">06</span> Contacto</p>
       <div class="contact-grid reveal">
-        <h2 class="contact-title">¿TENÉS UN<br>SISTEMA QUE<br>MEJORAR?</h2>
+        <h2 class="contact-title">¿Tenés un sistema<br>que <em>mejorar?</em></h2>
         <div class="contact-right">
-          <p class="body-txt">Disponible para proyectos B2B de automatización, integraciones y agentes AI. Abierto a
-            posiciones tech en LATAM y remoto.</p>
+          <p class="body-txt contact-txt">Disponible para proyectos B2B de automatización, integraciones y agentes AI.
+            Abierto a posiciones tech en LATAM y remoto.</p>
           <a href="mailto:santinospingola12@gmail.com" class="email-block">
-            <span class="email-lbl">EMAIL DIRECTO</span>
+            <span class="email-lbl">Email directo</span>
             <span class="email-addr">santinospingola12@gmail.com</span>
           </a>
-          <a href="mailto:santinospingola12@gmail.com" class="btn-orange">ENVIAR MENSAJE →</a>
+          <a href="mailto:santinospingola12@gmail.com" class="btn-primary btn-light">Enviar mensaje<span
+              class="btn-arrow">→</span></a>
         </div>
       </div>
     </div>
@@ -370,9 +371,9 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap footer-inner">
-      <span class="f-logo">SS.</span>
-      <span class="f-copy">© 2025 SANTINO SPINGOLA</span>
-      <span class="f-live"><span class="live-dot small"></span>SISTEMA ACTIVO</span>
+      <span class="f-logo">Santino.</span>
+      <span class="f-copy">© 2025 Santino Spingola</span>
+      <span class="f-live"><span class="live-dot small"></span>Sistema activo</span>
     </div>
   </footer>
 

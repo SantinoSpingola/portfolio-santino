@@ -23,13 +23,13 @@ Portfolio Santino/
 En `js/main.js`, al inicio del archivo:
 
 ```js
-const CERTIFICATIONS = [
-  { name: "Claude 101", completed: true },   // ← cambiar a true cuando esté listo
+const CERTS = [
+  { name: "Claude 101", done: true, date: "ABR 2026" },   // ← cambiar a true cuando esté listo
   ...
 ];
 ```
 
-Cambiar `completed: false` a `completed: true` en los cursos completados.
+Cambiar `done: false` a `done: true` en los cursos completados.
 La barra de progreso y el contador se actualizan automáticamente.
 
 ### Agregar links de verificación

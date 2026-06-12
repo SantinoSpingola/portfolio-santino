@@ -1,0 +1,10 @@
+# Windows / OneDrive
+desktop.ini
+
+# Archivos de trabajo locales
+.claude/
+claude.md
+prompt.md
+
+# Certificados (PDFs personales, no los usa el sitio)
+*.pdf
