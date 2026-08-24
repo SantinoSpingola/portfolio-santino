@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santino Spingola — IA aplicada, automatización e integraciones</title>
   <meta name="description"
-    content="Santino Spingola — Automation & AI Integration Specialist. San Isidro, Buenos Aires.">
+    content="Desarrollador de IA aplicada, automatización e integraciones. Integro modelos de lenguaje en productos reales, conecto CRM y ERP, y construyo sistemas de gestión multi-tenant. Buenos Aires, Argentina.">
   <meta name="theme-color" content="#F9F2EE">
-  <title>Santino Spingola — Automation & AI</title>
+
+  <!-- Open Graph — cómo se ve al compartir el link -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Santino Spingola — IA aplicada, automatización e integraciones">
+  <meta property="og:description"
+    content="Integro modelos de lenguaje en productos reales, conecto CRM y ERP, y construyo sistemas de gestión multi-tenant.">
+  <meta property="og:locale" content="es_AR">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script>document.documentElement.classList.remove('no-js');</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,9 +29,11 @@
 
 <body>
 
+  <a href="#work" class="skip-link">Saltar a los proyectos</a>
+
   <div class="scroll-bar" id="scroll-bar"></div>
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursor-ring"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
 
   <!-- NAV -->
@@ -28,20 +41,21 @@
     <a href="#hero" class="logo">Santino<span>.</span></a>
     <ul class="nav-links">
       <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#stack">Stack</a></li>
+      <li><a href="#work">Proyectos</a></li>
       <li><a href="#experience">Experiencia</a></li>
-      <li><a href="#certifications">Certificaciones</a></li>
+      <li><a href="#stack">Stack</a></li>
       <li><a href="#contact" class="nav-cta">Contacto</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <div class="mobile-nav" id="mobile-nav">
     <a href="#about" class="mob-link">Sobre mí</a>
-    <a href="#stack" class="mob-link">Stack</a>
+    <a href="#work" class="mob-link">Proyectos</a>
     <a href="#experience" class="mob-link">Experiencia</a>
+    <a href="#stack" class="mob-link">Stack</a>
     <a href="#certifications" class="mob-link">Certificaciones</a>
     <a href="#contact" class="mob-link">Contacto</a>
   </div>
@@ -52,7 +66,7 @@
 
       <div class="hero-eyebrow reveal in">
         <span class="live-dot"></span>
-        <span class="live-label">Disponible para proyectos B2B</span>
+        <span class="live-label">Disponible para proyectos y posiciones tech</span>
       </div>
 
       <h1 class="hero-names">
@@ -62,13 +76,13 @@
 
       <div class="hero-row">
         <div class="hero-left">
-          <p class="hero-role">Automation &amp; AI Integration Specialist</p>
+          <p class="hero-role">IA aplicada · Automatización · Integraciones</p>
           <p class="hero-loc">San Isidro · Buenos Aires · Argentina</p>
-          <p class="hero-desc">Diseño arquitecturas donde CRMs, ERPs, plataformas de mensajería y agentes AI trabajan
-            como <em>un solo ecosistema</em>.</p>
+          <p class="hero-desc">Llevo modelos de lenguaje a <em>sistemas de negocio reales</em>, conecto los sistemas que
+            una empresa ya usa, y construyo los que todavía no existen.</p>
           <div class="hero-btns">
-            <a href="#contact" class="btn-primary">Iniciar proyecto<span class="btn-arrow">→</span></a>
-            <a href="#experience" class="btn-ghost">Ver trabajo</a>
+            <a href="#work" class="btn-primary">Ver proyectos<span class="btn-arrow">→</span></a>
+            <a href="https://github.com/santinospingola" class="btn-ghost" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
 
@@ -77,7 +91,7 @@
             <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
             <span class="term-file">status.json</span>
           </div>
-          <pre class="term-body"><code id="term-code"></code><span class="blink">▌</span></pre>
+          <pre class="term-body"><code id="term-code"></code><span class="blink" aria-hidden="true">▌</span></pre>
         </div>
       </div>
 
@@ -87,39 +101,35 @@
   <!-- TICKER -->
   <div class="ticker-wrap" aria-hidden="true">
     <div class="ticker">
-      <span>n8n</span><span class="sep">✦</span>
-      <span>Bitrix24</span><span class="sep">✦</span>
       <span>Claude API</span><span class="sep">✦</span>
-      <span>WhatsApp Business API</span><span class="sep">✦</span>
-      <span>Chatwoot</span><span class="sep">✦</span>
-      <span>ManyChat</span><span class="sep">✦</span>
-      <span>Node.js</span><span class="sep">✦</span>
-      <span>Python</span><span class="sep">✦</span>
-      <span>SOAP/WSDL</span><span class="sep">✦</span>
-      <span>REST APIs</span><span class="sep">✦</span>
-      <span>GPT-4o</span><span class="sep">✦</span>
-      <span>Webhooks</span><span class="sep">✦</span>
-      <span>Linux VPS</span><span class="sep">✦</span>
-      <span>EspoCRM</span><span class="sep">✦</span>
-      <span>SQL</span><span class="sep">✦</span>
-      <span>RAG</span><span class="sep">✦</span>
-      <!-- duplicate for seamless loop -->
+      <span>Agentes IA</span><span class="sep">✦</span>
       <span>n8n</span><span class="sep">✦</span>
+      <span>MCP</span><span class="sep">✦</span>
       <span>Bitrix24</span><span class="sep">✦</span>
-      <span>Claude API</span><span class="sep">✦</span>
-      <span>WhatsApp Business API</span><span class="sep">✦</span>
-      <span>Chatwoot</span><span class="sep">✦</span>
-      <span>ManyChat</span><span class="sep">✦</span>
-      <span>Node.js</span><span class="sep">✦</span>
+      <span>SOAP / WSDL</span><span class="sep">✦</span>
+      <span>OAuth2</span><span class="sep">✦</span>
+      <span>Next.js</span><span class="sep">✦</span>
+      <span>TypeScript</span><span class="sep">✦</span>
       <span>Python</span><span class="sep">✦</span>
-      <span>SOAP/WSDL</span><span class="sep">✦</span>
-      <span>REST APIs</span><span class="sep">✦</span>
-      <span>GPT-4o</span><span class="sep">✦</span>
-      <span>Webhooks</span><span class="sep">✦</span>
-      <span>Linux VPS</span><span class="sep">✦</span>
-      <span>EspoCRM</span><span class="sep">✦</span>
-      <span>SQL</span><span class="sep">✦</span>
-      <span>RAG</span><span class="sep">✦</span>
+      <span>FastAPI</span><span class="sep">✦</span>
+      <span>PostgreSQL</span><span class="sep">✦</span>
+      <span>Docker</span><span class="sep">✦</span>
+      <span>Supabase</span><span class="sep">✦</span>
+      <!-- duplicado para el loop -->
+      <span>Claude API</span><span class="sep">✦</span>
+      <span>Agentes IA</span><span class="sep">✦</span>
+      <span>n8n</span><span class="sep">✦</span>
+      <span>MCP</span><span class="sep">✦</span>
+      <span>Bitrix24</span><span class="sep">✦</span>
+      <span>SOAP / WSDL</span><span class="sep">✦</span>
+      <span>OAuth2</span><span class="sep">✦</span>
+      <span>Next.js</span><span class="sep">✦</span>
+      <span>TypeScript</span><span class="sep">✦</span>
+      <span>Python</span><span class="sep">✦</span>
+      <span>FastAPI</span><span class="sep">✦</span>
+      <span>PostgreSQL</span><span class="sep">✦</span>
+      <span>Docker</span><span class="sep">✦</span>
+      <span>Supabase</span><span class="sep">✦</span>
     </div>
   </div>
 
@@ -129,25 +139,431 @@
       <p class="sec-label"><span class="num">01</span> Sobre mí</p>
       <div class="about-grid">
         <div class="reveal">
-          <h2 class="sec-title">Automatización.<br>Integración.<br><em>Impacto real.</em></h2>
-          <p class="body-txt">Especialista en automatización e integración de sistemas con experiencia real en empresas
-            medianas y grandes de Argentina y LATAM. Diseño arquitecturas donde CRMs, ERPs, plataformas de mensajería y
-            agentes AI trabajan como un ecosistema unificado.</p>
-          <p class="body-txt">Combino ejecución técnica con visión de negocio y formación en marketing y comunicación.
-          </p>
+          <h2 class="sec-title">IA aplicada.<br>Integración.<br><em>Sistemas que operan.</em></h2>
+          <p class="body-txt">Integro modelos de lenguaje dentro de productos que funcionan en producción: con control
+            de costos, registro de consumo y degradación controlada cuando el proveedor llega a su límite. No es un demo
+            de fin de semana — es software que alguien usa todos los días.</p>
+          <p class="body-txt">Automatizo procesos operativos y conecto entre sí los sistemas con los que una empresa
+            trabaja: gestión, CRM, ERP, facturación y mensajería. Cuando el sistema que hace falta no existe, lo
+            construyo completo.</p>
+          <p class="body-txt">Relevo el proceso junto a las áreas que van a usarlo, defino la arquitectura, desarrollo,
+            despliego y capacito. Documento decisiones, errores y límites, para que el conocimiento quede en el equipo y
+            no en una sola persona.</p>
         </div>
         <div class="stats reveal">
           <div class="stat">
-            <span class="stat-n" data-to="1">0</span>
-            <span class="stat-lbl">Proyecto activo</span>
+            <div class="stat-num"><span class="stat-n" data-to="2">0</span></div>
+            <span class="stat-lbl">Sistemas con IA en uso</span>
           </div>
           <div class="stat">
-            <span class="stat-n" data-to="7">0</span>
-            <span class="stat-lbl">Proyectos terminados</span>
+            <div class="stat-num"><span class="stat-n" data-to="3">0</span></div>
+            <span class="stat-lbl">CRM y ERP integrados</span>
           </div>
           <div class="stat">
-            <div class="stat-num"><span class="stat-n" data-to="1">0</span><span class="stat-sfx">+</span></div>
-            <span class="stat-lbl">Años de experiencia</span>
+            <div class="stat-num"><span class="stat-n" data-to="35">0</span></div>
+            <span class="stat-lbl">Tablas en el sistema que diseñé</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section bg-surface" id="work">
+    <div class="wrap">
+      <p class="sec-label"><span class="num">02</span> Proyectos</p>
+      <h2 class="sec-title reveal">Problemas reales,<br><em>resueltos de punta a punta</em></h2>
+
+      <div class="case-list">
+
+        <!-- 01 ÓRBITA -->
+        <article class="case reveal">
+          <div class="case-head">
+            <div>
+              <span class="case-idx">Caso 01 — Producto propio</span>
+              <h3 class="case-name">Órbita — Plataforma de gestión comercial multi-tenant</h3>
+              <p class="case-kind">Diseño, desarrollo y operación · desarrollador único</p>
+            </div>
+            <span class="case-badge live">En producción</span>
+          </div>
+          <div class="case-body">
+            <div class="case-block">
+              <h4>El problema</h4>
+              <p>Un equipo comercial vendía sobre planillas compartidas y mensajes directos. Nadie sabía cuánto tardaba
+                el equipo en responder un lead, las oportunidades se enfriaban sin que nadie lo notara, y el dueño no
+                podía ver el rendimiento del equipo sin preguntar uno por uno.</p>
+            </div>
+            <div class="case-block">
+              <h4>La solución</h4>
+              <p>Una plataforma multi-empresa que unifica contactos, catálogo con precios y promociones vigentes,
+                pipeline con cronómetro de primera respuesta, y las conversaciones de WhatsApp dentro del mismo
+                sistema.</p>
+            </div>
+            <div class="case-block">
+              <h4>Mi participación</h4>
+              <ul>
+                <li>Arquitectura, base de datos, backend, interfaz, pruebas y despliegue: <strong>todo</strong>.</li>
+                <li>5 módulos, 35 tablas, ~27.700 líneas de TypeScript.</li>
+                <li>169 pruebas automatizadas y 6 compuertas de calidad en verde.</li>
+              </ul>
+            </div>
+            <div class="case-block">
+              <h4>Decisiones de ingeniería</h4>
+              <ul>
+                <li><strong>Aislamiento por RLS en la base</strong>, no en el código, con una prueba que intenta la fuga
+                  entre empresas.</li>
+                <li><strong>Bus de eventos persistido</strong> con outbox transaccional, manejadores idempotentes y cola
+                  de fallidos operable.</li>
+                <li><strong>Puertos y adaptadores</strong>: 8 integraciones con dobles funcionales —incluido un
+                  <strong>puerto de IA</strong> para clasificación y resúmenes.</li>
+                <li><strong>Capa anticorrupción</strong> sobre la API de WhatsApp: tolera payloads desconocidos sin
+                  cortar el servicio.</li>
+              </ul>
+            </div>
+            <div class="case-block">
+              <h4>Producción</h4>
+              <ul>
+                <li>Supabase y Vercel en São Paulo, con driver dual: Postgres embebido en desarrollo y pruebas.</li>
+                <li>Capacitación y soporte continuo al equipo comercial que lo opera a diario.</li>
+              </ul>
+            </div>
+            <div class="case-impact case-block">
+              <h4>Impacto</h4>
+              <p>El equipo dejó las planillas: hoy opera dentro del sistema, con WhatsApp, pipeline y catálogo en un solo
+                lugar. Su núcleo se volvió la base de todos mis sistemas siguientes.</p>
+            </div>
+          </div>
+          <div class="case-foot">
+            <span class="tag">Next.js 15</span><span class="tag">React 19</span><span class="tag">TypeScript</span>
+            <span class="tag">Drizzle ORM</span><span class="tag">PostgreSQL · RLS</span><span
+              class="tag">Supabase</span>
+            <span class="tag">WhatsApp API</span><span class="tag">n8n</span><span class="tag">Vitest</span>
+          </div>
+          <div class="case-links">
+            <span class="case-note">Código privado — contiene datos de cliente</span>
+          </div>
+        </article>
+
+        <!-- 02 ASESOR VIRTUAL IA -->
+        <article class="case reveal">
+          <div class="case-head">
+            <div>
+              <span class="case-idx">Caso 02 — IA conversacional</span>
+              <h3 class="case-name">Asesor virtual con IA para inmobiliarias</h3>
+              <p class="case-kind">Agente conversacional · producto completo</p>
+            </div>
+            <span class="case-badge">Demo pública</span>
+          </div>
+          <div class="case-body">
+            <div class="case-block">
+              <h4>El problema</h4>
+              <p>Una inmobiliaria recibe todos los días las mismas consultas: si la propiedad sigue disponible, qué
+                requisitos piden, cuánto es el depósito, si se puede visitar el sábado. Llegan fuera de horario, se
+                acumulan, y cada respuesta tardía es una visita que no se agenda.</p>
+            </div>
+            <div class="case-block">
+              <h4>La solución</h4>
+              <p>Un agente conversacional que responde disponibilidad, condiciones y requisitos, <strong>agenda visitas
+                  dentro de la misma conversación</strong>, analiza imágenes de propiedades y mantiene el contexto entre
+                mensajes.</p>
+            </div>
+            <div class="case-block">
+              <h4>Arquitectura</h4>
+              <ul>
+                <li>Interfaz en <strong>Next.js</strong> sobre Vercel; la lógica del agente vive en un flujo de
+                  <strong>n8n</strong>.</li>
+                <li><strong>El webhook nunca llega al navegador:</strong> el cliente llama a <code>/api/chat</code> y el
+                  servidor reenvía a n8n.</li>
+                <li>El contexto se sostiene con un <strong>sessionId</strong>; la memoria vive en el flujo, no en la
+                  interfaz.</li>
+                <li>La respuesta de n8n se lee de forma defensiva, para que ajustar el flujo no rompa la interfaz.</li>
+              </ul>
+            </div>
+            <div class="case-impact case-block">
+              <h4>Por qué importa</h4>
+              <p>El comportamiento del asistente se ajusta editando el flujo en n8n, sin tocar código ni volver a
+                desplegar. Es la diferencia entre un chatbot y un sistema que se puede operar.</p>
+            </div>
+          </div>
+          <div class="case-foot">
+            <span class="tag pill-o">IA conversacional</span><span class="tag">n8n</span><span
+              class="tag">Next.js</span>
+            <span class="tag">TypeScript</span><span class="tag">Tailwind</span><span class="tag">Vercel</span>
+          </div>
+          <div class="case-links">
+            <a href="https://sistema-inmobiliarias.vercel.app" class="case-link primary" target="_blank"
+              rel="noopener">
+              ▶ Probar el demo <span class="arr">→</span>
+            </a>
+            <a href="https://github.com/santinospingola/argensys-chatbot" class="case-link" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+              Ver repositorio <span class="arr">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- 03 CONTENT STUDIO -->
+        <article class="case reveal">
+          <div class="case-head">
+            <div>
+              <span class="case-idx">Caso 03 — Argensys IT Services</span>
+              <h3 class="case-name">Content Studio — Producción de contenido con IA</h3>
+              <p class="case-kind">Producto interno · arquitectura, desarrollo y despliegue</p>
+            </div>
+            <span class="case-badge live">En uso interno</span>
+          </div>
+          <div class="case-body">
+            <div class="case-block">
+              <h4>El problema</h4>
+              <p>Producir contenido de marketing consumía horas del equipo cada semana, y el resultado no mantenía una
+                voz de marca consistente entre quien lo escribía y quien lo diseñaba.</p>
+            </div>
+            <div class="case-block">
+              <h4>La solución</h4>
+              <p>Un panel con cuatro módulos: biblioteca de marca que analiza material previo para construir el perfil de
+                la empresa, creador de posteos con slides ya renderizados como imagen, generador de guiones de video, y
+                editor que corta silencios y arma el video vertical con subtítulos.</p>
+            </div>
+            <div class="case-block">
+              <h4>Decisiones sobre el uso de IA</h4>
+              <ul>
+                <li>El motor LLM es <strong>Claude Code en modo headless</strong>, no la API: usa la sesión del plan del
+                  servidor en lugar de facturar por token.</li>
+                <li>Cada llamada se registra con <strong>módulo, duración, resultado y consumo</strong>.</li>
+                <li>Al alcanzar el límite del plan, la interfaz lo informa <strong>en vez de fallar en silencio</strong>.
+                </li>
+                <li>La aplicación levanta completa aunque el motor de IA no esté configurado.</li>
+              </ul>
+            </div>
+            <div class="case-impact case-block">
+              <h4>Impacto</h4>
+              <p>El equipo pasó de escribir y diseñar cada pieza desde cero a partir de un brief corto, con la voz de
+                marca aplicada automáticamente y los archivos listos para publicar.</p>
+            </div>
+          </div>
+          <div class="case-foot">
+            <span class="tag pill-o">Claude Code CLI</span><span class="tag">FastAPI</span><span
+              class="tag">Python</span>
+            <span class="tag">HTMX · Alpine</span><span class="tag">SQLite</span><span class="tag">Playwright</span>
+            <span class="tag">Remotion</span><span class="tag">Docker</span><span class="tag">VPS Linux</span>
+          </div>
+          <div class="case-links">
+            <span class="case-note">Producto interno de Argensys — código no público</span>
+          </div>
+        </article>
+
+        <!-- 04 CRM ↔ ERP -->
+        <article class="case reveal">
+          <div class="case-head">
+            <div>
+              <span class="case-idx">Caso 04 — Argensys IT Services</span>
+              <h3 class="case-name">CRM ↔ ERP: Bitrix24 con Bejerman y BAS</h3>
+              <p class="case-kind">Integración de sistemas empresariales</p>
+            </div>
+            <span class="case-badge live">Implementado</span>
+          </div>
+          <div class="case-body">
+            <div class="case-block">
+              <h4>El problema</h4>
+              <p>Cuando un negocio se cerraba en el CRM, alguien del equipo administrativo tenía que volver a cargar el
+                cliente y el comprobante de venta a mano en el ERP. Doble carga, demoras y errores de tipeo entre dos
+                sistemas que no estaban pensados para comunicarse.</p>
+            </div>
+            <div class="case-block">
+              <h4>La solución</h4>
+              <p>Dos microservicios que cierran el circuito: uno crea las notas de pedido en <strong>Bejerman</strong>
+                sobre su SDK SOAP, y otro da de alta al cliente en <strong>BAS</strong> cuando el negocio avanza de
+                etapa en Bitrix24.</p>
+            </div>
+            <div class="case-block">
+              <h4>Mi participación</h4>
+              <ul>
+                <li>Relevamiento del contrato SOAP con SoapUI: el ERP no tenía documentación pública de API.</li>
+                <li>Servicio Node.js/Express que arma el comprobante completo —ítems, IVA, punto de venta, condición de
+                  venta— y devuelve la respuesta parseada al CRM.</li>
+                <li>Autenticación <strong>OAuth2</strong> contra BAS con caché y renovación anticipada del token.</li>
+                <li>Despliegue con infraestructura declarada en código.</li>
+              </ul>
+            </div>
+            <div class="case-impact case-block">
+              <h4>Impacto</h4>
+              <p>El equipo de administración dejó de reescribir en el ERP lo que ya estaba cargado en el CRM: los
+                comprobantes y las altas de cliente pasaron a generarse solos al avanzar el negocio.</p>
+            </div>
+          </div>
+          <div class="case-foot">
+            <span class="tag pill-o">SOAP / WSDL</span><span class="tag">OAuth2</span><span class="tag">Bitrix24
+              REST</span>
+            <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Webhooks</span>
+            <span class="tag">Bejerman</span><span class="tag">BAS</span>
+          </div>
+          <div class="case-links">
+            <span class="case-note">Sistemas de cliente — código no público</span>
+          </div>
+        </article>
+
+        <!-- 05 PLATAFORMA BASE -->
+        <article class="case reveal">
+          <div class="case-head">
+            <div>
+              <span class="case-idx">Caso 05 — Producto propio</span>
+              <h3 class="case-name">Plataforma base para sistemas de gestión</h3>
+              <p class="case-kind">Núcleo reutilizable + sistemas verticales por rubro</p>
+            </div>
+            <span class="case-badge">Open source</span>
+          </div>
+          <div class="case-body">
+            <div class="case-block">
+              <h4>El problema</h4>
+              <p>Cada sistema de gestión para una PyME arrancaba de cero repitiendo lo mismo: usuarios, permisos,
+                aislamiento por cliente, eventos, manejo de dinero y fechas. Semanas de trabajo antes de escribir una
+                línea del negocio real.</p>
+            </div>
+            <div class="case-block">
+              <h4>La solución</h4>
+              <p>Extraje el núcleo de Órbita a una base reutilizable sin dominio de negocio: identidad, sesiones,
+                permisos, multi-tenancy con RLS, bus de eventos, cifrado de secretos y puertos de integración con mocks.
+                <strong>Sumar un módulo son tres declaraciones.</strong>
+              </p>
+            </div>
+            <div class="case-block">
+              <h4>Construido encima</h4>
+              <ul>
+                <li><strong>Servicios de electricidad:</strong> clientes, presupuestos, materiales y agenda.</li>
+                <li><strong>Distribución mayorista:</strong> motor de precios con listas, escalas y bonificaciones, más
+                  facturación electrónica.</li>
+                <li><strong>Análisis funcional de cinco rubros</strong> —consultorio, taller, inmobiliaria, servicio
+                  técnico en campo y distribución—, definiendo entidades y reglas de negocio antes de escribir código.
+                </li>
+              </ul>
+            </div>
+            <div class="case-impact case-block">
+              <h4>Por qué importa</h4>
+              <p>Es la diferencia entre entregar un sistema y poder entregar un sistema por rubro: la parte difícil
+                —seguridad, aislamiento de datos, trazabilidad— ya está escrita y probada.</p>
+            </div>
+          </div>
+          <div class="case-foot">
+            <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Drizzle ORM</span>
+            <span class="tag">PostgreSQL · RLS</span><span class="tag">RBAC</span><span class="tag">Event bus</span>
+            <span class="tag">Ports &amp; adapters</span>
+          </div>
+          <div class="case-links">
+            <a href="https://github.com/santinospingola/gestion-starter" class="case-link primary" target="_blank"
+              rel="noopener">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+              Ver repositorio <span class="arr">→</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- SECUNDARIO -->
+      <h3 class="cat-lbl" style="margin-top:3.5rem">También construí</h3>
+      <div class="mini-grid">
+        <div class="mini reveal">
+          <span class="mini-name">smart-money-tracker</span>
+          <p class="mini-desc">Análisis on-chain multi-cadena que detecta tokens con movimiento anómalo y rankea wallets
+            con un modelo de scoring propio. Lo interesante es la detección de bots: identifica flotas coordinadas
+            cruzando tokens, calculada sobre la base local sin consumir cuota de APIs.</p>
+          <div class="mini-tags"><span class="tag">TypeScript</span><span class="tag">SQLite</span><span
+              class="tag">Docker</span><span class="tag">Railway</span></div>
+          <div class="case-links" style="margin-top:1rem;padding-top:1rem">
+            <a href="https://github.com/santinospingola/smart-money-tracker" class="case-link" target="_blank"
+              rel="noopener">Repositorio <span class="arr">→</span></a>
+          </div>
+        </div>
+        <div class="mini reveal">
+          <span class="mini-name">Prospección B2B con scoring de IA</span>
+          <p class="mini-desc">Sistema que califica empresas como prospecto con IA, con proveedores intercambiables por
+            configuración (Groq, Gemini, OpenRouter, DeepSeek), prompts versionados y cumplimiento de robots.txt y Ley
+            25.326.</p>
+          <div class="mini-tags"><span class="tag pill-o">LLMs multi-proveedor</span><span
+              class="tag">Python</span><span class="tag">Typer</span></div>
+        </div>
+        <div class="mini reveal">
+          <span class="mini-name">BTC Bot Auto</span>
+          <p class="mini-desc">Bot de trading autónomo sobre BingX Futures: estrategia propia, dimensionamiento de
+            posición desde riesgo fijo, cortes de seguridad automáticos y panel de seguimiento en vivo.</p>
+          <div class="mini-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span
+              class="tag">Render</span><span class="tag">GitHub Actions</span></div>
+        </div>
+      </div>
+
+      <!-- TIRA GITHUB -->
+      <div class="gh-strip reveal">
+        <div class="gh-txt">
+          <h3>El código está publicado</h3>
+          <p>Repositorios con README, arquitectura documentada y decisiones explicadas. No capturas de pantalla:
+            código que se puede clonar y correr.</p>
+        </div>
+        <a href="https://github.com/santinospingola" class="gh-btn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+          </svg>
+          Ver GitHub
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <p class="sec-label"><span class="num">03</span> Experiencia</p>
+      <h2 class="sec-title reveal">Dónde<br><em>trabajo</em></h2>
+      <div class="tl">
+        <div class="tl-item reveal">
+          <div class="tl-side">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div>
+                <h3 class="tl-role">Especialista en Automatización e Integraciones</h3>
+                <p class="tl-co">Argensys IT Services S.R.L.</p>
+              </div>
+              <span class="tl-date">Abr 2025 — Presente</span>
+            </div>
+            <p class="body-txt" style="margin:0 0 1rem;max-width:none">Integración de Bitrix24 con los ERP y plataformas
+              de las empresas cliente, automatización de procesos internos y desarrollo de herramientas con IA para el
+              equipo.</p>
+            <div class="tl-projs">
+              <div class="tl-proj">
+                <span class="tl-proj-name">Herramientas internas con IA</span>
+                <p class="tl-proj-desc">Content Studio y el sistema de prospección con scoring automático. Ver casos 03 y
+                  la sección de abajo.</p>
+                <div class="tl-tags"><span class="tag">Claude</span><span class="tag">FastAPI</span></div>
+              </div>
+              <div class="tl-proj">
+                <span class="tl-proj-name">Integraciones CRM ↔ ERP</span>
+                <p class="tl-proj-desc">Bejerman por SOAP/WSDL y BAS por OAuth2, disparadas desde webhooks de Bitrix24.
+                  Ver caso 04.</p>
+                <div class="tl-tags"><span class="tag">SOAP</span><span class="tag">OAuth2</span></div>
+              </div>
+              <div class="tl-proj">
+                <span class="tl-proj-name">Automatizaciones con n8n</span>
+                <p class="tl-proj-desc">Flujos que conectan el CRM con plataformas de mensajería y de pagos, y que
+                  reemplazan pasos manuales dentro de los procesos comerciales.</p>
+                <div class="tl-tags"><span class="tag">n8n</span><span class="tag">Webhooks</span></div>
+              </div>
+              <div class="tl-proj">
+                <span class="tl-proj-name">Relevamiento, soporte y capacitación</span>
+                <p class="tl-proj-desc">Relevo requerimientos con el cliente, defino metodología y estimación junto a la
+                  gestora de proyectos, y capacito usuarios en CRM y en el uso de IA dentro de sistemas de gestión.</p>
+                <div class="tl-tags"><span class="tag">Consultoría</span></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -157,182 +573,84 @@
   <!-- STACK -->
   <section class="section bg-surface" id="stack">
     <div class="wrap">
-      <p class="sec-label"><span class="num">02</span> Stack tecnológico</p>
-      <h2 class="sec-title reveal">Herramientas<br><em>en mi stack</em></h2>
+      <p class="sec-label"><span class="num">04</span> Stack tecnológico</p>
+      <h2 class="sec-title reveal">Con qué<br><em>trabajo</em></h2>
       <div class="stack-grid">
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">Automatización</h3>
+          <h3 class="cat-lbl">IA aplicada</h3>
           <div class="pills">
-            <span class="pill">n8n</span><span class="pill">Webhooks</span>
-            <span class="pill">REST APIs</span><span class="pill">SOAP/WSDL</span>
+            <span class="pill pill-o">Claude API</span><span class="pill pill-o">Claude Code headless</span>
+            <span class="pill">Agentes</span><span class="pill">Prompt engineering</span>
+            <span class="pill">LLMs multi-proveedor</span><span class="pill">MCP</span>
           </div>
         </div>
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">CRM &amp; Contact Center</h3>
+          <h3 class="cat-lbl">Automatización &amp; APIs</h3>
           <div class="pills">
-            <span class="pill">Bitrix24</span><span class="pill">Chatwoot</span>
-            <span class="pill">EspoCRM</span>
+            <span class="pill pill-o">n8n</span><span class="pill">REST</span>
+            <span class="pill">SOAP / WSDL</span><span class="pill">Webhooks</span><span class="pill">OAuth2</span>
           </div>
         </div>
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">Mensajería</h3>
+          <h3 class="cat-lbl">CRM &amp; ERP</h3>
           <div class="pills">
-            <span class="pill">WhatsApp Business API</span>
-            <span class="pill">ManyChat</span>
+            <span class="pill pill-o">Bitrix24</span><span class="pill">Bejerman</span><span class="pill">BAS</span>
           </div>
         </div>
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">AI &amp; Agentes</h3>
+          <h3 class="cat-lbl">Backend</h3>
           <div class="pills">
-            <span class="pill pill-o">Claude API</span>
-            <span class="pill pill-o">GPT-4o</span>
-            <span class="pill">AI Agents</span>
-            <span class="pill">RAG</span>
+            <span class="pill">Python</span><span class="pill">TypeScript</span><span class="pill">Node.js</span>
+            <span class="pill">FastAPI</span><span class="pill">Express</span>
           </div>
         </div>
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">Desarrollo</h3>
+          <h3 class="cat-lbl">Datos &amp; frontend</h3>
           <div class="pills">
-            <span class="pill">Node.js</span><span class="pill">Python</span>
-            <span class="pill">JavaScript</span>
+            <span class="pill">PostgreSQL</span><span class="pill">Drizzle ORM</span><span class="pill">SQLite</span>
+            <span class="pill">Next.js 15</span><span class="pill">React 19</span><span class="pill">Tailwind</span>
           </div>
         </div>
         <div class="stack-cat reveal">
-          <h3 class="cat-lbl">Infraestructura</h3>
+          <h3 class="cat-lbl">Arquitectura &amp; infra</h3>
           <div class="pills">
-            <span class="pill">Hostinger VPS</span>
-            <span class="pill">Linux</span><span class="pill">SQL</span>
+            <span class="pill">Multi-tenancy · RLS</span><span class="pill">RBAC</span><span class="pill">Event bus</span>
+            <span class="pill">Docker</span><span class="pill">Vercel</span><span class="pill">Supabase</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
+  <!-- CERTIFICACIONES -->
+  <section class="section" id="certifications">
     <div class="wrap">
-      <p class="sec-label"><span class="num">03</span> Experiencia</p>
-      <h2 class="sec-title reveal">Experiencia<br><em>y proyectos</em></h2>
-      <div class="tl">
-
-        <div class="tl-item reveal">
-          <div class="tl-side">
-            <div class="tl-dot"></div>
-          </div>
-          <div class="tl-card">
-            <div class="tl-top">
-              <div>
-                <h3 class="tl-role">Especialista en Automatización &amp; AI</h3>
-                <p class="tl-co">Argensys IT Services S.R.L</p>
-              </div>
-              <span class="tl-date">Abr 2025 — Presente</span>
-            </div>
-
-            <div class="tl-projs">
-
-              <div class="tl-proj">
-                <span class="tl-proj-name">AI Agent de Atención al Cliente</span>
-                <p class="tl-proj-desc">Agente conversacional integrado a Chatwoot y Bitrix24 que califica leads, crea
-                  tratos automáticamente y escala conversaciones a operadores humanos. Redujo el tiempo de respuesta
-                  inicial un 70%.</p>
-                <div class="tl-tags"><span class="tag">Claude API</span><span class="tag">n8n</span><span
-                    class="tag">Chatwoot</span><span class="tag">Bitrix24</span></div>
-              </div>
-
-              <div class="tl-proj">
-                <span class="tl-proj-name">Bitrix24 ↔ Bejerman ERP</span>
-                <p class="tl-proj-desc">Sincronización vía SOAP con mapeo de entidades y automatización de comprobantes
-                  de venta, eliminando la carga manual del equipo de administración.</p>
-                <div class="tl-tags"><span class="tag">SOAP/WSDL</span><span class="tag">Bitrix24</span><span
-                    class="tag">n8n</span><span class="tag">Node.js</span></div>
-              </div>
-
-              <div class="tl-proj">
-                <span class="tl-proj-name">Pipeline Outbound WhatsApp</span>
-                <p class="tl-proj-desc">Integración n8n + Chatwoot para visibilidad completa de mensajes salientes en
-                  inbox unificado, resolviendo el problema de mensajes que no aparecían en el sistema.</p>
-                <div class="tl-tags"><span class="tag">n8n</span><span class="tag">Chatwoot API</span><span
-                    class="tag">WhatsApp API</span></div>
-              </div>
-
-              <div class="tl-proj">
-                <span class="tl-proj-name">Bitrix24 + BAS Integration</span>
-                <p class="tl-proj-desc">Alta automática de clientes en CRM al registrarse en BAS. Elimina errores de
-                  carga manual y reduce el tiempo de onboarding del equipo comercial.</p>
-                <div class="tl-tags"><span class="tag">Bitrix24</span><span class="tag">BAS</span><span
-                    class="tag">n8n</span><span class="tag">Webhooks</span></div>
-              </div>
-
-              <div class="tl-proj">
-                <span class="tl-proj-name">Bitrix24 + Hotmart</span>
-                <p class="tl-proj-desc">Incorporación automática desde Hotmart al CRM: creación de contacto, trato y
-                  asignación a pipeline al momento exacto de la compra del cliente.</p>
-                <div class="tl-tags"><span class="tag">Bitrix24</span><span class="tag">Hotmart</span><span
-                    class="tag">n8n</span><span class="tag">REST APIs</span></div>
-              </div>
-
-              <div class="tl-proj">
-                <span class="tl-proj-name">Bitrix24 + ManyChat</span>
-                <p class="tl-proj-desc">Sincronización de leads generados en ManyChat al CRM con datos de contacto
-                  completos, para seguimiento unificado de todo el pipeline de ventas.</p>
-                <div class="tl-tags"><span class="tag">Bitrix24</span><span class="tag">ManyChat</span><span
-                    class="tag">n8n</span><span class="tag">Webhooks</span></div>
-              </div>
-
-              <div class="tl-proj">
-                <span class="tl-proj-name">Reportes AI Automatizados</span>
-                <p class="tl-proj-desc">Generación y envío automático de reportes de ventas con análisis e insights
-                  generados por AI, entregados a management por email en forma diaria.</p>
-                <div class="tl-tags"><span class="tag">Claude API</span><span class="tag">n8n</span><span
-                    class="tag">Email SMTP</span></div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICATIONS -->
-  <section class="section bg-surface" id="certifications">
-    <div class="wrap">
-      <p class="sec-label"><span class="num">04</span> Certificaciones</p>
+      <p class="sec-label"><span class="num">05</span> Certificaciones</p>
       <div class="cert-top reveal">
         <div>
           <div class="anth-badge">
             <span class="anth-icon">⬡</span>
             <div>
               <span class="anth-name">Anthropic Academy</span>
-              <span class="anth-sub">2025 — 2026</span>
+              <span class="anth-sub">2026</span>
             </div>
           </div>
-          <h2 class="sec-title" style="margin-bottom:0">Certificaciones<br><em>en curso</em></h2>
-        </div>
-        <div class="prog-wrap">
-          <div class="prog-lbl">
-            <span class="mono-sm muted">Progreso</span>
-            <span class="mono-sm accent" id="prog-count">— / 13</span>
-          </div>
-          <div class="prog-track">
-            <div class="prog-bar" id="prog-bar"></div>
-          </div>
+          <h2 class="sec-title" style="margin-bottom:0">Certificaciones<br><em>verificables</em></h2>
         </div>
       </div>
       <div class="cert-grid" id="cert-grid"></div>
     </div>
   </section>
 
-  <!-- EDUCATION -->
-  <section class="section" id="education">
+  <!-- FORMACIÓN -->
+  <section class="section bg-surface" id="education">
     <div class="wrap">
-      <p class="sec-label"><span class="num">05</span> Formación</p>
+      <p class="sec-label"><span class="num">06</span> Formación</p>
       <div class="edu-grid reveal">
         <div class="edu-card">
           <span class="edu-yr">2024</span>
           <h3 class="edu-title">Técnico en Electromecánica</h3>
-          <p class="edu-inst">Escuela Técnica N°4</p>
+          <p class="edu-inst">Escuela Técnica N.º 4</p>
         </div>
         <div class="edu-card">
           <span class="edu-yr">2024</span>
@@ -348,21 +666,33 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACTO -->
   <section class="section contact-sec" id="contact">
     <div class="wrap">
-      <p class="sec-label dark"><span class="num">06</span> Contacto</p>
+      <p class="sec-label dark"><span class="num">07</span> Contacto</p>
       <div class="contact-grid reveal">
-        <h2 class="contact-title">¿Tenés un sistema<br>que <em>mejorar?</em></h2>
+        <h2 class="contact-title">¿Tenés un proceso<br>que <em>debería resolverse solo?</em></h2>
         <div class="contact-right">
-          <p class="body-txt contact-txt">Disponible para proyectos B2B de automatización, integraciones y agentes AI.
-            Abierto a posiciones tech en LATAM y remoto.</p>
+          <p class="body-txt contact-txt">Disponible para proyectos de IA aplicada, automatización de procesos e
+            integración entre sistemas. Abierto a posiciones tech en Argentina, LATAM y remoto.</p>
           <a href="mailto:santinospingola12@gmail.com" class="email-block">
             <span class="email-lbl">Email directo</span>
             <span class="email-addr">santinospingola12@gmail.com</span>
           </a>
           <a href="mailto:santinospingola12@gmail.com" class="btn-primary btn-light">Enviar mensaje<span
               class="btn-arrow">→</span></a>
+          <div class="social-row">
+            <a href="https://github.com/santinospingola" class="social-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+              GitHub
+            </a>
+            <!-- TODO Santino: completá tu LinkedIn y descomentá
+            <a href="https://www.linkedin.com/in/USUARIO" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            -->
+          </div>
         </div>
       </div>
     </div>
@@ -372,7 +702,7 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <span class="f-logo">Santino.</span>
-      <span class="f-copy">© 2025 Santino Spingola</span>
+      <span class="f-copy">© 2026 Santino Spingola</span>
       <span class="f-live"><span class="live-dot small"></span>Sistema activo</span>
     </div>
   </footer>

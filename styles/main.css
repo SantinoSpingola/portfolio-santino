@@ -845,3 +845,209 @@ em  { font-style:italic; }
   .prog-wrap  { width:100%; }
   .tl-card    { padding:1.4rem; }
 }
+
+/* ============================================================
+   CASE STUDIES — sección Proyectos
+   ============================================================ */
+.case-list { display:flex; flex-direction:column; gap:1.5rem; }
+
+.case {
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:clamp(1.5rem, 3vw, 2.4rem);
+  transition:border-color .3s, box-shadow .3s, transform .3s var(--ease-out);
+}
+.case:hover {
+  border-color:var(--rust-30);
+  transform:translateY(-3px);
+  box-shadow:0 22px 44px -26px rgba(142, 47, 63, .4);
+}
+
+.case-head {
+  display:flex; justify-content:space-between; align-items:flex-start;
+  gap:1.25rem; flex-wrap:wrap;
+  padding-bottom:1.15rem; margin-bottom:1.35rem;
+  border-bottom:1px solid var(--line);
+}
+.case-idx {
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.14em;
+  color:var(--muted); display:block; margin-bottom:.5rem;
+}
+.case-name {
+  font-family:var(--display);
+  font-size:clamp(1.4rem, 2.4vw, 1.85rem);
+  font-weight:600; line-height:1.15; letter-spacing:-.015em;
+}
+.case-kind {
+  font-size:.9rem; color:var(--ink-soft); margin-top:.35rem;
+}
+.case-badge {
+  font-family:var(--mono); font-size:.58rem; letter-spacing:.1em;
+  text-transform:uppercase; white-space:nowrap;
+  padding:.4rem .75rem; border-radius:999px;
+  background:var(--amber-12); color:#8A6417;
+  border:1px solid rgba(201, 148, 53, .3);
+}
+.case-badge.live { background:var(--rust-08); color:var(--rust-deep); border-color:var(--rust-15); }
+
+.case-body { display:grid; grid-template-columns:repeat(3, 1fr); gap:1.6rem 2rem; }
+.case-block h4 {
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--rust-deep);
+  margin-bottom:.55rem; font-weight:600;
+}
+.case-block p { font-size:.87rem; color:var(--ink-soft); line-height:1.65; }
+.case-block ul { display:flex; flex-direction:column; gap:.4rem; }
+.case-block li {
+  font-size:.85rem; color:var(--ink-soft); line-height:1.6;
+  padding-left:.85rem; position:relative;
+}
+.case-block li::before {
+  content:""; position:absolute; left:0; top:.6em;
+  width:4px; height:4px; border-radius:50%; background:var(--rust-30);
+}
+.case-block strong { color:var(--ink); font-weight:600; }
+
+.case-foot {
+  margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid var(--line);
+  display:flex; flex-wrap:wrap; gap:.4rem; align-items:center;
+}
+
+.case-impact {
+  grid-column:1 / -1;
+  background:var(--rust-08);
+  border-left:2px solid var(--rust);
+  border-radius:0 8px 8px 0;
+  padding:.9rem 1.15rem;
+}
+.case-impact h4 { color:var(--rust-deep); }
+.case-impact p { color:var(--ink); font-size:.88rem; }
+
+/* proyectos secundarios */
+.mini-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; margin-top:1.5rem; }
+.mini {
+  background:var(--paper); border:1px solid var(--line);
+  border-radius:12px; padding:1.25rem;
+  transition:border-color .25s, transform .25s var(--ease-out);
+}
+.mini:hover { border-color:var(--rust-30); transform:translateY(-2px); }
+.mini-name {
+  font-family:var(--display); font-size:1.05rem; font-weight:600;
+  display:block; margin-bottom:.4rem; line-height:1.2;
+}
+.mini-desc { font-size:.8rem; color:var(--ink-soft); line-height:1.6; margin-bottom:.7rem; }
+.mini-tags { display:flex; flex-wrap:wrap; gap:.3rem; }
+
+@media (max-width:900px) {
+  .case-body { grid-template-columns:1fr 1fr; }
+  .mini-grid { grid-template-columns:1fr 1fr; }
+}
+@media (max-width:640px) {
+  .case-body { grid-template-columns:1fr; gap:1.35rem; }
+  .mini-grid { grid-template-columns:1fr; }
+  .case-head { flex-direction:column; gap:.85rem; }
+}
+
+/* ============================================================
+   ACCESIBILIDAD — skip link y fallback sin JS
+   ============================================================ */
+.skip-link {
+  position:absolute; left:-9999px; top:0; z-index:9999;
+  background:var(--rust); color:var(--cream);
+  padding:.7rem 1.2rem; border-radius:0 0 8px 0;
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
+}
+.skip-link:focus { left:0; }
+
+/* Si JS no corre, nada queda invisible */
+html.no-js .reveal { opacity:1; transform:none; }
+html.no-js .cursor, html.no-js .cursor-ring { display:none; }
+html.no-js body { cursor:auto; }
+
+/* ============================================================
+   ENLACES DE PROYECTO — repo, demo
+   ============================================================ */
+.case-links {
+  display:flex; flex-wrap:wrap; gap:.6rem;
+  margin-top:1.35rem; padding-top:1.25rem;
+  border-top:1px solid var(--line);
+}
+.case-link {
+  display:inline-flex; align-items:center; gap:.45rem;
+  font-family:var(--mono); font-size:.63rem;
+  letter-spacing:.09em; text-transform:uppercase; font-weight:600;
+  padding:.55rem .95rem; border-radius:999px;
+  border:1px solid var(--line-2); color:var(--ink);
+  background:var(--paper);
+  transition:background .22s, border-color .22s, color .22s, transform .22s var(--ease-out);
+}
+.case-link:hover {
+  background:var(--ink); border-color:var(--ink); color:var(--cream);
+  transform:translateY(-2px);
+}
+.case-link.primary {
+  background:var(--rust); border-color:var(--rust); color:var(--cream);
+}
+.case-link.primary:hover { background:var(--rust-deep); border-color:var(--rust-deep); }
+.case-link svg { width:13px; height:13px; flex-shrink:0; }
+.case-link .arr { transition:transform .22s var(--ease-out); }
+.case-link:hover .arr { transform:translateX(2px); }
+
+.case-note {
+  font-family:var(--mono); font-size:.6rem; letter-spacing:.07em;
+  color:var(--muted); align-self:center; padding-left:.2rem;
+}
+
+/* la caja de impacto y los links conviven: el foot ya no lleva borde propio */
+.case-foot { border-top:none; padding-top:0; margin-top:1.25rem; }
+
+/* ============================================================
+   TIRA DE GITHUB
+   ============================================================ */
+.gh-strip {
+  margin-top:3rem;
+  background:var(--espresso);
+  border-radius:16px;
+  padding:clamp(1.75rem, 3.5vw, 2.75rem);
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1.5rem; flex-wrap:wrap;
+}
+.gh-txt h3 {
+  font-family:var(--display); font-size:clamp(1.3rem, 2.4vw, 1.75rem);
+  font-weight:600; color:var(--cream); line-height:1.2; margin-bottom:.4rem;
+}
+.gh-txt p { font-size:.9rem; color:var(--cream-soft); max-width:44ch; }
+.gh-btn {
+  display:inline-flex; align-items:center; gap:.6rem;
+  background:var(--cream); color:var(--espresso);
+  padding:.85rem 1.5rem; border-radius:999px;
+  font-family:var(--mono); font-size:.68rem;
+  letter-spacing:.1em; text-transform:uppercase; font-weight:600;
+  white-space:nowrap;
+  transition:transform .22s var(--ease-out), box-shadow .22s;
+}
+.gh-btn:hover { transform:translateY(-2px); box-shadow:0 12px 28px -12px rgba(0,0,0,.5); }
+.gh-btn svg { width:17px; height:17px; }
+
+/* ============================================================
+   CONTACTO — enlaces sociales
+   ============================================================ */
+.social-row { display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.1rem; }
+.social-link {
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-family:var(--mono); font-size:.64rem;
+  letter-spacing:.09em; text-transform:uppercase; font-weight:600;
+  padding:.6rem 1.05rem; border-radius:999px;
+  border:1px solid var(--line-dark); color:var(--cream);
+  transition:background .22s, border-color .22s, transform .22s var(--ease-out);
+}
+.social-link:hover { background:var(--espresso-2); border-color:var(--cream-soft); transform:translateY(-2px); }
+.social-link svg { width:15px; height:15px; }
+
+@media (max-width:640px) {
+  .gh-strip { flex-direction:column; align-items:flex-start; }
+  .gh-btn { width:100%; justify-content:center; }
+  .case-links { gap:.5rem; }
+  .case-link { font-size:.6rem; padding:.5rem .8rem; }
+}

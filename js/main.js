@@ -4,31 +4,20 @@
 
 // Cambiar done:false → true para marcar cursos completados
 const CERTS = [
-  { name:"Claude 101",                                       done:true,  date:"ABR 2026" },
-  { name:"AI Fluency: Framework & Foundations",              done:true,  date:"2026"     },
-  { name:"Claude Code 101",                                  done:true,  date:"ABR 2026" },
-  { name:"Introduction to Claude Cowork",                    done:true,  date:"ABR 2026" },
-  { name:"Claude Code in Action",                            done:true,  date:"MAY 2026" },
-  { name:"AI Fluency for Students",                          done:false },
-  { name:"Building with the Claude API",                     done:false },
-  { name:"Introduction to Model Context Protocol (MCP)",     done:false },
-  { name:"Advanced MCP Implementation",                      done:false },
-  { name:"Claude Skills in Claude Code",                     done:false },
-  { name:"Sub-agents in Claude Code",                        done:false },
-  { name:"Teaching AI Fluency",                              done:false },
-  { name:"AI Fluency for Nonprofits",                        done:false },
-  { name:"Building with Claude on Google Cloud (Vertex AI)", done:false },
-  { name:"Claude for Teams / Enterprise",                    done:false },
+  { name:"Claude 101",                          done:true, date:"ABR 2026" },
+  { name:"Claude Code 101",                     done:true, date:"ABR 2026" },
+  { name:"Claude Code in Action",               done:true, date:"MAY 2026" },
+  { name:"AI Fluency: Framework & Foundations", done:true, date:"2026"     },
+  { name:"Introduction to Claude Cowork",       done:true, date:"ABR 2026" },
 ];
 
-// URLs de verificación (mismo orden que CERTS). Dejar "#" si no disponible aún.
+// URLs de verificacion (mismo orden que CERTS). Dejar "#" si no disponible aun.
 const CERT_URLS = [
   "https://verify.skilljar.com/c/mpu7g2csoxjy",  // Claude 101
-  "https://verify.skilljar.com/c/ntbmgn8eb48h",  // AI Fluency: Framework & Foundations
   "https://verify.skilljar.com/c/um68gpivm9hh",  // Claude Code 101
-  "https://verify.skilljar.com/c/f462y5dwjyb4",  // Introduction to Claude Cowork
   "https://verify.skilljar.com/c/docsi9w2chup",  // Claude Code in Action
-  "#","#","#","#","#","#","#","#","#","#"
+  "https://verify.skilljar.com/c/ntbmgn8eb48h",  // AI Fluency: Framework & Foundations
+  "https://verify.skilljar.com/c/f462y5dwjyb4",  // Introduction to Claude Cowork
 ];
 
 /* ============================================================
@@ -53,7 +42,7 @@ document.addEventListener("mousemove", e => {
   requestAnimationFrame(rafRing);
 })();
 
-document.querySelectorAll("a, button, .stat, .cert-card, .edu-card, .pill, .tl-proj, .tl-card").forEach(el => {
+document.querySelectorAll("a, button, .stat, .cert-card, .edu-card, .pill, .tl-proj, .tl-card, .case, .mini, .case-link, .gh-btn, .social-link").forEach(el => {
   el.addEventListener("mouseenter", () => { cursor.classList.add("big"); ring.classList.add("big"); });
   el.addEventListener("mouseleave", () => { cursor.classList.remove("big"); ring.classList.remove("big"); });
 });
@@ -76,11 +65,24 @@ window.addEventListener("scroll", () => {
 hamburger.addEventListener("click", () => {
   const open = mobileNav.classList.toggle("open");
   hamburger.classList.toggle("open", open);
+  hamburger.setAttribute("aria-expanded", String(open));
+  hamburger.setAttribute("aria-label", open ? "Cerrar menu" : "Abrir menu");
+});
+
+// Cerrar el menu movil con Escape
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && mobileNav.classList.contains("open")) {
+    mobileNav.classList.remove("open");
+    hamburger.classList.remove("open");
+    hamburger.setAttribute("aria-expanded", "false");
+    hamburger.focus();
+  }
 });
 
 document.querySelectorAll(".mob-link").forEach(l => l.addEventListener("click", () => {
   mobileNav.classList.remove("open");
   hamburger.classList.remove("open");
+  hamburger.setAttribute("aria-expanded", "false");
 }));
 
 /* ============================================================
@@ -89,15 +91,15 @@ document.querySelectorAll(".mob-link").forEach(l => l.addEventListener("click", 
 const code = document.getElementById("term-code");
 const text = `{
   "name": "Santino Spingola",
-  "role": "Automation Specialist",
+  "role": "IA Aplicada / Automatizacion / Integraciones",
   "available": true,
   "location": "San Isidro, AR",
   "focus": [
-    "AI Agents",
-    "CRM Integration",
-    "Automation"
+    "LLMs en produccion",
+    "CRM <-> ERP",
+    "Sistemas de gestion"
   ],
-  "uptime": "24/7"
+  "github": "santinospingola"
 }`;
 
 let i = 0;
@@ -106,7 +108,11 @@ function type() {
   code.textContent += text[i++];
   setTimeout(type, text[i - 1] === "\n" ? 55 : 20);
 }
-setTimeout(type, 800);
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  code.textContent = text;          // sin animacion: el texto ya esta
+} else {
+  setTimeout(type, 800);
+}
 
 /* ============================================================
    SCROLL REVEAL
@@ -156,7 +162,7 @@ function buildCerts() {
 
   const total = CERTS.length;
   const done  = CERTS.filter(c => c.done).length;
-  count.textContent = `${done} / ${total}`;
+  if (count) count.textContent = `${done} / ${total}`;
 
   CERTS.forEach((c, i) => {
     const card = document.createElement("div");
@@ -180,9 +186,11 @@ function buildCerts() {
 
   // Animar la barra cuando la sección entra en vista
   const certSec = document.getElementById("certifications");
-  new IntersectionObserver(([e]) => {
-    if (e.isIntersecting) bar.style.width = (done / total * 100) + "%";
-  }, { threshold:.25 }).observe(certSec);
+  if (bar && certSec) {
+    new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) bar.style.width = (done / total * 100) + "%";
+    }, { threshold:.25 }).observe(certSec);
+  }
 }
 buildCerts();
 
@@ -190,7 +198,7 @@ buildCerts();
 /* ============================================================
    SMOOTH SCROLL
    ============================================================ */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
+document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(a => {
   a.addEventListener("click", e => {
     const t = document.querySelector(a.getAttribute("href"));
     if (t) { e.preventDefault(); t.scrollIntoView({ behavior:"smooth" }); }

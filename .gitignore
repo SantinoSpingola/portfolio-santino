@@ -8,3 +8,8 @@ prompt.md
 
 # Certificados (PDFs personales, no los usa el sitio)
 *.pdf
+
+# respaldos locales de la revision
+*.bak
+_es.html
+_en.html
