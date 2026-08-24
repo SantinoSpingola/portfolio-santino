@@ -98,7 +98,6 @@
   .row{ margin-bottom:3px; text-align:left; }
   .row b{ color:var(--ink); font-weight:700; }
 
-
   /* ---------- Barra de acciones (solo pantalla) ---------- */
   .actions{
     max-width:210mm; margin:24px auto -12px; padding:0 4px;
@@ -140,7 +139,8 @@
     <p class="role">Desarrollador de IA Aplicada, Automatización e Integraciones</p>
     <p class="contact">
       Buenos Aires, Argentina<span class="sep">|</span><a
-        href="mailto:santinospingola12@gmail.com">santinospingola12@gmail.com</a><span class="sep">|</span><a href="tel:+541168792883">+54 11 6879-2883</a><span class="sep">|</span><a
+        href="mailto:santinospingola12@gmail.com">santinospingola12@gmail.com</a><span class="sep">|</span><a
+        href="tel:+541168792883">+54 11 6879-2883</a><span class="sep">|</span><a
         href="https://portfolio.spingola.com.ar">portfolio.spingola.com.ar</a><span class="sep">|</span><a
         href="https://github.com/santinospingola">github.com/santinospingola</a>
     </p>
@@ -148,38 +148,35 @@
 
   <section>
     <h2>Perfil profesional</h2>
-    <p>Desarrollador especializado en llevar inteligencia artificial a sistemas de negocio en producción: integro
-      modelos de lenguaje dentro de productos reales, con control de costos, registro de consumo y degradación
-      controlada ante los límites del proveedor. Automatizo procesos operativos y conecto entre sí los sistemas con los
-      que una empresa trabaja —gestión, CRM, ERP, facturación y mensajería— mediante APIs REST, SOAP/WSDL, OAuth2 y
-      webhooks. Más de 25 proyectos desarrollados entre sistemas propios en producción, integraciones para empresas
-      cliente y herramientas internas con IA. Trabajo de punta a punta: relevo el proceso con las áreas que van a
-      usarlo, desarrollo, despliego y capacito a los usuarios.</p>
+    <p>Desarrollador especializado en llevar inteligencia artificial a sistemas de negocio en producción. Integro
+      modelos de lenguaje dentro de productos reales, con control de costos y una respuesta prevista para cuando el
+      proveedor llega a su límite. Automatizo procesos operativos y conecto entre sí los sistemas con los que una
+      empresa trabaja: gestión, CRM, ERP, facturación y mensajería, mediante APIs REST, SOAP, OAuth2 y webhooks. Más de
+      25 proyectos desarrollados entre sistemas propios en producción, integraciones para empresas cliente y
+      herramientas internas con IA. Trabajo de punta a punta: relevo el proceso con las áreas que van a usarlo,
+      desarrollo, despliego y capacito a los usuarios.</p>
   </section>
 
   <section>
     <h2>Experiencia profesional</h2>
     <div class="job-head">
-      <p class="job-title">Especialista en Automatización e Integraciones <span class="job-org">— Argensys IT Services
+      <p class="job-title">Especialista en Automatización e Integraciones <span class="job-org">en Argensys IT Services
           S.R.L.</span></p>
-      <span class="job-date">Abril 2025 — Presente</span>
+      <span class="job-date">Abril 2025 a la fecha</span>
     </div>
     <ul>
-      <li>Construí <b>Content Studio</b>, plataforma interna de generación de contenido con IA: copy, piezas gráficas
-        renderizadas, guiones y edición automática de video. Definí el uso del CLI de Claude en modo headless como motor
-        LLM en lugar de la API, con registro de consumo por módulo y degradación controlada al alcanzar el límite del
-        plan. FastAPI, SQLite, Playwright y Remotion, en Docker sobre VPS Linux.</li>
-      <li>Desarrollé un <b>sistema de prospección B2B con calificación automática de leads por IA</b>, con abstracción
-        multi-proveedor intercambiable por configuración (Groq/Llama 3.3, Gemini, OpenRouter, DeepSeek), prompts
-        versionados y cumplimiento de robots.txt y Ley 25.326. Python, Typer y Pydantic.</li>
-      <li>Integré <b>Bitrix24 con dos ERPs</b>: Bejerman sobre un servicio SOAP/WSDL sin documentación pública —relevé
-        el contrato con SoapUI y construí un microservicio Node.js/Express que genera los comprobantes de venta
-        completos— y BAS mediante webhook y OAuth2 con caché y renovación anticipada del token. Ambas integraciones
-        eliminaron la recarga manual entre CRM y ERP.</li>
-      <li>Implementé <b>automatizaciones de procesos con n8n</b> conectando el CRM con plataformas de mensajería y de
-        pagos, y acompaño el ciclo con el cliente: relevamiento de requerimientos, estimación junto a la gestora de
-        proyectos, soporte directo y capacitación de usuarios en CRM y en el uso de IA dentro de sistemas de gestión.
-      </li>
+      <li>Construí <b>Content Studio</b>, una plataforma interna para generar contenido de marketing con IA: textos,
+        piezas gráficas y guiones de video. Usa el CLI de Claude en modo headless como motor, con registro de consumo
+        por módulo y un aviso claro cuando el plan llega a su límite. Python, FastAPI y Docker.</li>
+      <li>Desarrollé un <b>sistema de prospección B2B</b> que califica automáticamente a cada empresa como posible
+        cliente usando IA, con los proveedores de modelos intercambiables desde la configuración. Python.</li>
+      <li>Integré <b>Bitrix24 con dos ERPs</b>. Bejerman, sobre un servicio SOAP sin documentación pública: relevé el
+        contrato del servicio con SoapUI y construí un microservicio en Node.js que genera los comprobantes de venta
+        completos. Y BAS, mediante webhook y autenticación OAuth2. Las dos integraciones eliminaron la recarga manual de
+        datos entre el CRM y el ERP.</li>
+      <li>Implementé <b>automatizaciones de procesos con n8n</b>, conectando el CRM con plataformas de mensajería y de
+        pagos. Acompaño el ciclo con el cliente: relevamiento de requerimientos, estimación junto a la gestora de
+        proyectos, soporte directo y capacitación de usuarios en CRM y en el uso de IA.</li>
     </ul>
   </section>
 
@@ -188,15 +185,15 @@
 
     <div class="proj">
       <div class="proj-head">
-        <span class="proj-name">Órbita — Plataforma de gestión comercial multi-tenant</span>
+        <span class="proj-name">Órbita, plataforma de gestión comercial multiempresa</span>
         <span class="proj-links">En producción</span>
       </div>
-      <p class="proj-stack">Next.js 15 · React 19 · TypeScript · Drizzle ORM · PostgreSQL · Supabase · Vercel</p>
-      <p>Desarrollador único de punta a punta: 5 módulos, 35 tablas, unas 27.700 líneas de TypeScript y 169 pruebas
-        automatizadas. Aislamiento entre empresas por Row Level Security en la base de datos, verificado por una prueba
-        que intenta el acceso cruzado; bus de eventos persistido con outbox transaccional y cola de fallidos operable;
-        arquitectura de puertos y adaptadores con ocho integraciones, incluido un puerto de IA; y contact center de
-        WhatsApp con capa anticorrupción. Capacito y doy soporte al equipo comercial que lo usa a diario.</p>
+      <p class="proj-stack">Next.js, React, TypeScript, PostgreSQL, Supabase</p>
+      <p>Desarrollador único de punta a punta: 5 módulos, 35 tablas y 169 pruebas automatizadas. Cada empresa ve
+        solamente sus datos, y ese aislamiento lo aplica la base de datos y no el código de la aplicación: hay una
+        prueba automatizada que intenta leer datos de otra empresa y verifica que el intento falle. Incluye el contact
+        center de WhatsApp dentro del mismo sistema, con el pipeline comercial y el catálogo de productos. Capacito y
+        doy soporte al equipo comercial que lo usa a diario.</p>
     </div>
 
     <div class="proj">
@@ -205,48 +202,47 @@
         <span class="proj-links"><a href="https://sistema-inmobiliarias.vercel.app">Demo</a> · <a
             href="https://github.com/santinospingola/argensys-chatbot">Repositorio</a></span>
       </div>
-      <p class="proj-stack">Next.js · TypeScript · n8n · Vercel</p>
-      <p>Agente conversacional que responde disponibilidad y condiciones de alquiler, agenda visitas dentro de la misma
-        conversación, analiza imágenes de propiedades y mantiene el contexto entre mensajes. La lógica del agente vive
-        en un flujo de n8n y la interfaz lo consume por webhook desde el servidor, nunca desde el navegador: el
-        comportamiento se ajusta editando el flujo, sin volver a desplegar.</p>
+      <p class="proj-stack">Next.js, TypeScript, n8n</p>
+      <p>Agente conversacional que responde por disponibilidad de propiedades y condiciones de alquiler, agenda visitas
+        dentro de la misma conversación, analiza las imágenes que le manda el cliente y mantiene el contexto entre
+        mensajes. La lógica del agente vive en un flujo de n8n que la interfaz consume desde el servidor, así que
+        ajustar sus respuestas o los datos que consulta no requiere tocar código ni volver a desplegar.</p>
     </div>
 
     <div class="proj">
       <div class="proj-head">
-        <span class="proj-name">Plataforma base para sistemas de gestión y verticales</span>
-        <span class="proj-links"><a href="https://github.com/santinospingola/gestion-starter">Repositorio</a></span>
+        <span class="proj-name">Sistema de gestión para servicios de electricidad</span>
+        <span class="proj-links"><a href="https://github.com/santinospingola/gestion-starter">Repositorio de la
+            base</a></span>
       </div>
-      <p class="proj-stack">Next.js · TypeScript · PostgreSQL · RLS · RBAC</p>
-      <p>Núcleo de Órbita extraído a una base sin dominio de negocio —identidad, permisos, multi-tenancy, eventos,
-        cifrado de secretos y puertos de integración— donde incorporar un módulo requiere tres declaraciones. Sobre esa
-        base construí un sistema para servicios de electricidad y un vertical de distribución mayorista con motor de
-        precios y facturación electrónica, además del análisis funcional de cinco rubros.</p>
+      <p class="proj-stack">Next.js, TypeScript, PostgreSQL</p>
+      <p>Clientes con sus direcciones, catálogo de materiales, presupuestos y agenda de trabajos. El presupuesto congela
+        el precio y la descripción de cada material en el momento de emitirlo, así una actualización de precios no
+        cambia lo que ya se le presupuestó a un cliente. Los trabajos avanzan por estados de programado a en curso y
+        hecho. Está construido sobre una base multiempresa propia que reutilizo entre sistemas, con la identidad, los
+        permisos y el aislamiento de datos ya resueltos.</p>
     </div>
   </section>
 
   <section>
     <h2>Habilidades técnicas</h2>
-    <p class="skill"><span class="skill-label">IA aplicada:</span> Claude API · Integración de LLMs en producto · Claude
-      Code en modo headless · Abstracción multi-proveedor (Groq, Gemini, OpenRouter, DeepSeek) · Ingeniería de prompts ·
-      Agentes · Control de costos y consumo de tokens · MCP</p>
-    <p class="skill"><span class="skill-label">Automatización e integraciones:</span> REST · SOAP/WSDL · Webhooks ·
-      OAuth2 · Integraciones con terceros · Automatización de procesos de negocio · n8n · Bitrix24 · Bejerman ERP · BAS ·
-      Idempotencia y control de tasa</p>
-    <p class="skill"><span class="skill-label">Desarrollo:</span> Python · TypeScript · JavaScript · Node.js · FastAPI ·
-      Express · Next.js 15 · React 19 · Tailwind · PostgreSQL · Drizzle ORM · SQLite</p>
-    <p class="skill"><span class="skill-label">Arquitectura e infraestructura:</span> Multi-tenancy con RLS · RBAC ·
-      Arquitectura hexagonal · Arquitectura orientada a eventos · Docker · Vercel · Supabase · Railway · VPS Linux ·
-      GitHub Actions · Vitest · Playwright</p>
-    <p class="skill"><span class="skill-label">Trabajo con clientes:</span> Relevamiento de requerimientos · Estimación
-      y planificación · Capacitación de usuarios · Puesta en producción y soporte</p>
+    <p class="skill"><span class="skill-label">IA aplicada:</span> Claude API, integración de modelos de lenguaje en
+      producto, agentes conversacionales, ingeniería de prompts.</p>
+    <p class="skill"><span class="skill-label">Lenguajes y frameworks:</span> Python, TypeScript, JavaScript, Node.js,
+      FastAPI, Next.js, React, Tailwind.</p>
+    <p class="skill"><span class="skill-label">Bases de datos:</span> PostgreSQL, SQL, modelado de datos.</p>
+    <p class="skill"><span class="skill-label">Integraciones y automatización:</span> APIs REST, SOAP, webhooks, OAuth2,
+      n8n, Bitrix24.</p>
+    <p class="skill"><span class="skill-label">Infraestructura:</span> Docker, Vercel, Supabase, Git.</p>
+    <p class="skill"><span class="skill-label">Trabajo con clientes:</span> relevamiento de requerimientos, estimación,
+      capacitación de usuarios, puesta en producción y soporte.</p>
   </section>
 
   <section>
     <h2>Formación y certificaciones</h2>
-    <p class="row"><b>Técnico en Electromecánica</b> — Escuela Técnica N.º 4 · 2024</p>
-    <p class="row"><b>Anthropic Academy</b> · 2026 — Claude 101 · Claude Code 101 · Claude Code in Action · AI Fluency:
-      Framework &amp; Foundations · Introduction to Claude Cowork (certificados verificables)</p>
+    <p class="row"><b>Técnico en Electromecánica.</b> Escuela Técnica N.º 4, 2024.</p>
+    <p class="row"><b>Anthropic Academy, 2026.</b> Cinco certificaciones en Claude, Claude Code y AI Fluency, todas
+      verificables.</p>
   </section>
 
 </div>
