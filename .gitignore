@@ -13,3 +13,6 @@ prompt.md
 *.bak
 _es.html
 _en.html
+
+# excepcion: el CV si va al sitio
+!cv/*.pdf
