@@ -80,8 +80,8 @@
         <div class="hero-left">
           <p class="hero-role">IA aplicada · Automatización · Integraciones</p>
           <p class="hero-loc">San Isidro · Buenos Aires · Argentina</p>
-          <p class="hero-desc">Llevo modelos de lenguaje a <em>sistemas de negocio reales</em>, conecto los sistemas que
-            una empresa ya usa, y construyo los que todavía no existen.</p>
+          <p class="hero-desc">Llevo modelos de lenguaje a <em>productos que se usan todos los días</em>, conecto los
+            sistemas que una empresa ya tiene y construyo los que le faltan.</p>
           <div class="hero-btns">
             <a href="#work" class="btn-primary">Ver proyectos<span class="btn-arrow">→</span></a>
             <a href="cv/" class="btn-ghost">Ver CV</a>
@@ -142,16 +142,15 @@
       <p class="sec-label"><span class="num">01</span> Sobre mí</p>
       <div class="about-grid">
         <div class="reveal">
-          <h2 class="sec-title">IA aplicada.<br>Integración.<br><em>Sistemas que operan.</em></h2>
-          <p class="body-txt">Integro modelos de lenguaje dentro de productos que funcionan en producción: con control
-            de costos, registro de consumo y degradación controlada cuando el proveedor llega a su límite. No es un demo
-            de fin de semana — es software que alguien usa todos los días.</p>
+          <h2 class="sec-title">IA aplicada.<br>Integración.<br><em>Sistemas en producción.</em></h2>
+          <p class="body-txt">Integro modelos de lenguaje dentro de productos que ya están funcionando, con control de
+            costos, registro de consumo y una respuesta prevista para cuando el proveedor llega a su límite.</p>
           <p class="body-txt">Automatizo procesos operativos y conecto entre sí los sistemas con los que una empresa
             trabaja: gestión, CRM, ERP, facturación y mensajería. Cuando el sistema que hace falta no existe, lo
             construyo completo.</p>
           <p class="body-txt">Relevo el proceso junto a las áreas que van a usarlo, defino la arquitectura, desarrollo,
-            despliego y capacito. Documento decisiones, errores y límites, para que el conocimiento quede en el equipo y
-            no en una sola persona.</p>
+            despliego y capacito. Dejo documentadas las decisiones y los problemas que fui encontrando, así el equipo
+            puede seguir trabajando sin depender de mí.</p>
         </div>
         <div class="stats reveal">
           <div class="stat">
@@ -217,7 +216,7 @@
                   entre empresas.</li>
                 <li><strong>Bus de eventos persistido</strong> con outbox transaccional, manejadores idempotentes y cola
                   de fallidos operable.</li>
-                <li><strong>Puertos y adaptadores</strong>: 8 integraciones con dobles funcionales —incluido un
+                <li><strong>Puertos y adaptadores</strong>: 8 integraciones con dobles funcionales, incluido un
                   <strong>puerto de IA</strong> para clasificación y resúmenes.</li>
                 <li><strong>Capa anticorrupción</strong> sobre la API de WhatsApp: tolera payloads desconocidos sin
                   cortar el servicio.</li>
@@ -285,7 +284,7 @@
             <div class="case-impact case-block">
               <h4>Por qué importa</h4>
               <p>El comportamiento del asistente se ajusta editando el flujo en n8n, sin tocar código ni volver a
-                desplegar. Es la diferencia entre un chatbot y un sistema que se puede operar.</p>
+                desplegar. Cambiar una respuesta o sumar un dato que consulte lleva minutos.</p>
             </div>
           </div>
           <div class="case-foot">
@@ -337,8 +336,7 @@
                 <li>El motor LLM es <strong>Claude Code en modo headless</strong>, no la API: usa la sesión del plan del
                   servidor en lugar de facturar por token.</li>
                 <li>Cada llamada se registra con <strong>módulo, duración, resultado y consumo</strong>.</li>
-                <li>Al alcanzar el límite del plan, la interfaz lo informa <strong>en vez de fallar en silencio</strong>.
-                </li>
+                <li>Si el plan llega a su límite, la interfaz lo avisa y el pedido queda pendiente para reintentarlo.</li>
                 <li>La aplicación levanta completa aunque el motor de IA no esté configurado.</li>
               </ul>
             </div>
@@ -446,8 +444,8 @@
             </div>
             <div class="case-impact case-block">
               <h4>Por qué importa</h4>
-              <p>Es la diferencia entre entregar un sistema y poder entregar un sistema por rubro: la parte difícil
-                —seguridad, aislamiento de datos, trazabilidad— ya está escrita y probada.</p>
+              <p>La parte difícil —seguridad, aislamiento de datos y trazabilidad— ya está escrita y probada, así que un
+                sistema nuevo arranca directamente por lo que el negocio necesita.</p>
             </div>
           </div>
           <div class="case-foot">
@@ -475,8 +473,8 @@
         <div class="mini reveal">
           <span class="mini-name">smart-money-tracker</span>
           <p class="mini-desc">Análisis on-chain multi-cadena que detecta tokens con movimiento anómalo y rankea wallets
-            con un modelo de scoring propio. Lo interesante es la detección de bots: identifica flotas coordinadas
-            cruzando tokens, calculada sobre la base local sin consumir cuota de APIs.</p>
+            con un modelo de scoring propio. Incluye un detector de flotas de bots que las identifica cruzando tokens,
+            sobre la base local y sin consumir cuota de APIs.</p>
           <div class="mini-tags"><span class="tag">TypeScript</span><span class="tag">SQLite</span><span
               class="tag">Docker</span><span class="tag">Railway</span></div>
           <div class="case-links" style="margin-top:1rem;padding-top:1rem">
@@ -504,16 +502,15 @@
       <!-- TIRA GITHUB -->
       <div class="gh-strip reveal">
         <div class="gh-txt">
-          <h3>El código está publicado</h3>
-          <p>Repositorios con README, arquitectura documentada y decisiones explicadas. No capturas de pantalla:
-            código que se puede clonar y correr.</p>
+          <h3>Repositorios</h3>
+          <p>Los proyectos que puedo compartir están en GitHub, con su documentación y las decisiones de diseño.</p>
         </div>
         <a href="https://github.com/santinospingola" class="gh-btn" target="_blank" rel="noopener">
           <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
             <path
               d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
           </svg>
-          Ver GitHub
+          Ver mi GitHub
         </a>
       </div>
 
