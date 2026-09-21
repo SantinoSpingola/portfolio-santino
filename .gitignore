@@ -16,3 +16,6 @@ _en.html
 
 # excepcion: el CV si va al sitio
 !cv/*.pdf
+
+# Skills instaladas localmente para Claude Code
+skills-lock.json

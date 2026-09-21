@@ -6,679 +6,808 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Santino Spingola — IA aplicada, automatización e integraciones</title>
   <meta name="description"
-    content="Desarrollador de IA aplicada, automatización e integraciones. Integro modelos de lenguaje en productos reales, conecto CRM y ERP, y construyo sistemas de gestión multi-tenant. Buenos Aires, Argentina.">
-  <meta name="theme-color" content="#F9F2EE">
+    content="Santino Spingola, desarrollador de IA aplicada y automatización. Construyo integraciones, automatizaciones y sistemas de gestión con IA que le ahorran horas a un negocio.">
+  <meta name="theme-color" content="#4801FF" id="theme-color">
 
   <!-- Open Graph — cómo se ve al compartir el link -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Santino Spingola — IA aplicada, automatización e integraciones">
   <meta property="og:description"
-    content="Integro modelos de lenguaje en productos reales, conecto CRM y ERP, y construyo sistemas de gestión multi-tenant.">
+    content="Integraciones, automatizaciones y sistemas de gestión con IA que le ahorran horas a un negocio.">
   <meta property="og:locale" content="es_AR">
   <meta name="twitter:card" content="summary_large_image">
 
-  <script>document.documentElement.classList.remove('no-js');</script>
+  <script>
+    document.documentElement.classList.remove('no-js');
+    // Aplica el modo de color guardado antes de pintar, para evitar el parpadeo
+    try {
+      var m = localStorage.getItem('color-mode');
+      if (m === 'night' || m === 'light') document.documentElement.dataset.mode = m;
+    } catch (e) {}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body>
+<body class="intro">
 
-  <a href="#work" class="skip-link">Saltar a los proyectos</a>
+  <a href="#work" class="skip-link">Saltar al contenido</a>
 
-  <div class="scroll-bar" id="scroll-bar"></div>
-  <div class="cursor" id="cursor" aria-hidden="true"></div>
-  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
+  <!-- LOGO -->
+  <a href="#" class="logo" id="logo" aria-label="Santino Spingola — inicio">
+    <span class="slide"><span>Santino</span></span>
+    <span class="slide"><span>Spingola</span></span>
+  </a>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <a href="#hero" class="logo">Santino<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#work">Proyectos</a></li>
-      <li><a href="#experience">Experiencia</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#contact" class="nav-cta">Contacto</a></li>
+  <!-- SECCIONES -->
+  <main class="stage" id="work">
+    <h1 class="sr-only">Santino Spingola — IA aplicada, automatización e integraciones.</h1>
+    <ul class="projects" id="projects">
+      <li class="project"><div class="project-box"><a href="#sobre-mi" data-info="01 — Quién soy">Sobre mí</a></div></li>
+      <li class="project"><div class="project-box"><a href="#experiencia" data-info="02 — Argensys IT Services">Experien-<br>cia</a></div></li>
+      <li class="project"><div class="project-box"><a href="#proyectos" data-info="03 — 12 proyectos">Proyectos</a></div></li>
+      <li class="project"><div class="project-box"><a href="#stack" data-info="04 — Herramientas">Stack</a></div></li>
+      <li class="project"><div class="project-box"><a href="#certificaciones" data-info="05 — Anthropic Academy">Certifi-<br>caciones</a></div></li>
+      <li class="project"><div class="project-box"><a href="#contacto" data-info="06 — Escribime">Contacto</a></div></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  </main>
 
-  <div class="mobile-nav" id="mobile-nav">
-    <a href="#about" class="mob-link">Sobre mí</a>
-    <a href="#work" class="mob-link">Proyectos</a>
-    <a href="#experience" class="mob-link">Experiencia</a>
-    <a href="#stack" class="mob-link">Stack</a>
-    <a href="#certifications" class="mob-link">Certificaciones</a>
-    <a href="#contact" class="mob-link">Contacto</a>
-  </div>
-
-  <!-- HERO -->
-  <header class="hero" id="hero">
-    <div class="wrap">
-
-      <div class="hero-eyebrow reveal in">
-        <span class="live-dot"></span>
-        <span class="live-label">Disponible para nuevos proyectos</span>
-      </div>
-
-      <h1 class="hero-names">
-        <span class="name-line">Santino</span>
-        <span class="name-line name-accent">Spingola</span>
-      </h1>
-
-      <div class="hero-row">
-        <div class="hero-left">
-          <p class="hero-role">IA aplicada · Automatización · Integraciones</p>
-          <p class="hero-loc">San Isidro · Buenos Aires · Argentina</p>
-          <p class="hero-desc">Llevo modelos de lenguaje a <em>productos que se usan todos los días</em>, conecto los
-            sistemas que una empresa ya tiene y construyo los que le faltan.</p>
-          <div class="hero-btns">
-            <a href="#work" class="btn-primary">Ver proyectos<span class="btn-arrow">→</span></a>
-            <a href="https://github.com/santinospingola" class="btn-ghost" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-
-        <div class="terminal" id="terminal">
-          <div class="term-bar">
-            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-            <span class="term-file">status.json</span>
-          </div>
-          <pre class="term-body"><code id="term-code"></code><span class="blink" aria-hidden="true">▌</span></pre>
-        </div>
-      </div>
-
+  <!-- INFO / NAV -->
+  <footer class="info" id="info">
+    <ul class="info-col">
+      <li>Santino Spingola</li>
+      <li>IA aplicada · Automatización</li>
+    </ul>
+    <ul class="info-col">
+      <li>San Isidro, Buenos Aires</li>
+      <li><a href="mailto:santinospingola12@gmail.com"><strong>santinospingola12@gmail.com</strong></a></li>
+    </ul>
+    <nav class="info-col info-nav" aria-label="Redes">
+      <ul>
+        <li><a href="https://www.instagram.com/spingola.ai/" target="_blank" rel="noopener"><span>01</span> <strong>instagram</strong></a></li>
+        <li><a href="https://www.tiktok.com/@spingola.software" target="_blank" rel="noopener"><span>02</span> <strong>tiktok</strong></a></li>
+      </ul>
+    </nav>
+    <nav class="info-col info-social" aria-label="Contacto directo">
+      <ul>
+        <li><a href="https://github.com/SantinoSpingola/" target="_blank" rel="noopener"><span>03</span> <strong>github</strong></a></li>
+        <li><a href="mailto:santinospingola12@gmail.com"><span>04</span> <strong>mail</strong></a></li>
+      </ul>
+    </nav>
+    <div class="info-col info-status">
+      <span>estado</span>
+      <strong><span class="live-dot" aria-hidden="true"></span>disponible</strong>
     </div>
-  </header>
-
-  <!-- TICKER -->
-  <div class="ticker-wrap" aria-hidden="true">
-    <div class="ticker">
-      <span>Claude API</span><span class="sep">✦</span>
-      <span>Agentes IA</span><span class="sep">✦</span>
-      <span>n8n</span><span class="sep">✦</span>
-      <span>MCP</span><span class="sep">✦</span>
-      <span>Bitrix24</span><span class="sep">✦</span>
-      <span>SOAP / WSDL</span><span class="sep">✦</span>
-      <span>OAuth2</span><span class="sep">✦</span>
-      <span>Next.js</span><span class="sep">✦</span>
-      <span>TypeScript</span><span class="sep">✦</span>
-      <span>Python</span><span class="sep">✦</span>
-      <span>FastAPI</span><span class="sep">✦</span>
-      <span>PostgreSQL</span><span class="sep">✦</span>
-      <span>Docker</span><span class="sep">✦</span>
-      <span>Supabase</span><span class="sep">✦</span>
-      <!-- duplicado para el loop -->
-      <span>Claude API</span><span class="sep">✦</span>
-      <span>Agentes IA</span><span class="sep">✦</span>
-      <span>n8n</span><span class="sep">✦</span>
-      <span>MCP</span><span class="sep">✦</span>
-      <span>Bitrix24</span><span class="sep">✦</span>
-      <span>SOAP / WSDL</span><span class="sep">✦</span>
-      <span>OAuth2</span><span class="sep">✦</span>
-      <span>Next.js</span><span class="sep">✦</span>
-      <span>TypeScript</span><span class="sep">✦</span>
-      <span>Python</span><span class="sep">✦</span>
-      <span>FastAPI</span><span class="sep">✦</span>
-      <span>PostgreSQL</span><span class="sep">✦</span>
-      <span>Docker</span><span class="sep">✦</span>
-      <span>Supabase</span><span class="sep">✦</span>
+    <div class="modes" role="group" aria-label="Modo de color">
+      <button type="button" class="mode" data-mode="ultra" aria-label="Modo ultra (violeta)"></button>
+      <button type="button" class="mode" data-mode="night" aria-label="Modo noche"></button>
+      <button type="button" class="mode" data-mode="light" aria-label="Modo claro"></button>
     </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="wrap">
-      <p class="sec-label"><span class="num">01</span> Sobre mí</p>
-      <div class="about-grid">
-        <div class="reveal">
-          <h2 class="sec-title">IA aplicada.<br>Integración.<br><em>Sistemas en producción.</em></h2>
-          <p class="body-txt">Integro modelos de lenguaje dentro de productos que ya están funcionando, con control de
-            costos, registro de consumo y una respuesta prevista para cuando el proveedor llega a su límite.</p>
-          <p class="body-txt">Automatizo procesos operativos y conecto entre sí los sistemas con los que una empresa
-            trabaja: gestión, CRM, ERP, facturación y mensajería. Cuando el sistema que hace falta no existe, lo
-            construyo completo.</p>
-          <p class="body-txt">Relevo el proceso junto a las áreas que van a usarlo, defino la arquitectura, desarrollo,
-            despliego y capacito. Dejo documentadas las decisiones y los problemas que fui encontrando, así el equipo
-            puede seguir trabajando sin depender de mí.</p>
-        </div>
-        <div class="stats reveal">
-          <div class="stat">
-            <div class="stat-num"><span class="stat-n" data-to="25">0</span><span class="stat-sfx">+</span></div>
-            <span class="stat-lbl">Proyectos desarrollados</span>
-          </div>
-          <div class="stat">
-            <div class="stat-num"><span class="stat-n" data-to="6">0</span></div>
-            <span class="stat-lbl">Empresas cliente</span>
-          </div>
-          <div class="stat">
-            <div class="stat-num"><span class="stat-n" data-to="18">0</span></div>
-            <span class="stat-lbl">Automatizaciones e integraciones</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROYECTOS -->
-  <section class="section bg-surface" id="work">
-    <div class="wrap">
-      <p class="sec-label"><span class="num">02</span> Proyectos</p>
-      <h2 class="sec-title reveal">Problemas reales,<br><em>resueltos de punta a punta</em></h2>
-
-      <div class="case-list">
-
-        <!-- 01 ÓRBITA -->
-        <article class="case reveal">
-          <div class="case-head">
-            <div>
-              <span class="case-idx">Caso 01 — Producto propio</span>
-              <h3 class="case-name">Órbita — Plataforma de gestión comercial multi-tenant</h3>
-              <p class="case-kind">Diseño, desarrollo y operación · desarrollador único</p>
-            </div>
-            <span class="case-badge live">En producción</span>
-          </div>
-          <div class="case-body">
-            <div class="case-block">
-              <h4>El problema</h4>
-              <p>Un equipo comercial vendía sobre planillas compartidas y mensajes directos. Nadie sabía cuánto tardaba
-                el equipo en responder un lead, las oportunidades se enfriaban sin que nadie lo notara, y el dueño no
-                podía ver el rendimiento del equipo sin preguntar uno por uno.</p>
-            </div>
-            <div class="case-block">
-              <h4>La solución</h4>
-              <p>Una plataforma multi-empresa que unifica contactos, catálogo con precios y promociones vigentes,
-                pipeline con cronómetro de primera respuesta, y las conversaciones de WhatsApp dentro del mismo
-                sistema.</p>
-            </div>
-            <div class="case-block">
-              <h4>Mi participación</h4>
-              <ul>
-                <li>Arquitectura, base de datos, backend, interfaz, pruebas y despliegue: <strong>todo</strong>.</li>
-                <li>5 módulos, 35 tablas, ~27.700 líneas de TypeScript.</li>
-                <li>169 pruebas automatizadas y 6 compuertas de calidad en verde.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4>Decisiones de ingeniería</h4>
-              <ul>
-                <li><strong>Aislamiento por RLS en la base</strong>, no en el código, con una prueba que intenta la fuga
-                  entre empresas.</li>
-                <li><strong>Bus de eventos persistido</strong> con outbox transaccional, manejadores idempotentes y cola
-                  de fallidos operable.</li>
-                <li><strong>Puertos y adaptadores</strong>: 8 integraciones con dobles funcionales, incluido un
-                  <strong>puerto de IA</strong> para clasificación y resúmenes.</li>
-                <li><strong>Capa anticorrupción</strong> sobre la API de WhatsApp: tolera payloads desconocidos sin
-                  cortar el servicio.</li>
-              </ul>
-            </div>
-            <div class="case-block">
-              <h4>Producción</h4>
-              <ul>
-                <li>Supabase y Vercel en São Paulo, con driver dual: Postgres embebido en desarrollo y pruebas.</li>
-                <li>Capacitación y soporte continuo al equipo comercial que lo opera a diario.</li>
-              </ul>
-            </div>
-            <div class="case-impact case-block">
-              <h4>Impacto</h4>
-              <p>El equipo dejó las planillas: hoy opera dentro del sistema, con WhatsApp, pipeline y catálogo en un solo
-                lugar. Su núcleo se volvió la base de todos mis sistemas siguientes.</p>
-            </div>
-          </div>
-          <div class="case-foot">
-            <span class="tag">Next.js 15</span><span class="tag">React 19</span><span class="tag">TypeScript</span>
-            <span class="tag">Drizzle ORM</span><span class="tag">PostgreSQL · RLS</span><span
-              class="tag">Supabase</span>
-            <span class="tag">WhatsApp API</span><span class="tag">n8n</span><span class="tag">Vitest</span>
-          </div>
-          <div class="case-links">
-            <span class="case-note">Código privado — contiene datos de cliente</span>
-          </div>
-        </article>
-
-        <!-- 02 ASESOR VIRTUAL IA -->
-        <article class="case reveal">
-          <div class="case-head">
-            <div>
-              <span class="case-idx">Caso 02 — IA conversacional</span>
-              <h3 class="case-name">Asesor virtual con IA para inmobiliarias</h3>
-              <p class="case-kind">Agente conversacional · producto completo</p>
-            </div>
-            <span class="case-badge">Demo pública</span>
-          </div>
-          <div class="case-body">
-            <div class="case-block">
-              <h4>El problema</h4>
-              <p>Una inmobiliaria recibe todos los días las mismas consultas: si la propiedad sigue disponible, qué
-                requisitos piden, cuánto es el depósito, si se puede visitar el sábado. Llegan fuera de horario, se
-                acumulan, y cada respuesta tardía es una visita que no se agenda.</p>
-            </div>
-            <div class="case-block">
-              <h4>La solución</h4>
-              <p>Un agente conversacional que responde disponibilidad, condiciones y requisitos, <strong>agenda visitas
-                  dentro de la misma conversación</strong>, analiza imágenes de propiedades y mantiene el contexto entre
-                mensajes.</p>
-            </div>
-            <div class="case-block">
-              <h4>Arquitectura</h4>
-              <ul>
-                <li>Interfaz en <strong>Next.js</strong> sobre Vercel; la lógica del agente vive en un flujo de
-                  <strong>n8n</strong>.</li>
-                <li><strong>El webhook nunca llega al navegador:</strong> el cliente llama a <code>/api/chat</code> y el
-                  servidor reenvía a n8n.</li>
-                <li>El contexto se sostiene con un <strong>sessionId</strong>; la memoria vive en el flujo, no en la
-                  interfaz.</li>
-                <li>La respuesta de n8n se lee de forma defensiva, para que ajustar el flujo no rompa la interfaz.</li>
-              </ul>
-            </div>
-            <div class="case-impact case-block">
-              <h4>Por qué importa</h4>
-              <p>El comportamiento del asistente se ajusta editando el flujo en n8n, sin tocar código ni volver a
-                desplegar. Cambiar una respuesta o sumar un dato que consulte lleva minutos.</p>
-            </div>
-          </div>
-          <div class="case-foot">
-            <span class="tag pill-o">IA conversacional</span><span class="tag">n8n</span><span
-              class="tag">Next.js</span>
-            <span class="tag">TypeScript</span><span class="tag">Tailwind</span><span class="tag">Vercel</span>
-          </div>
-          <div class="case-links">
-            <a href="https://sistema-inmobiliarias.vercel.app" class="case-link primary" target="_blank"
-              rel="noopener">
-              ▶ Probar el demo <span class="arr">→</span>
-            </a>
-            <a href="https://github.com/santinospingola/argensys-chatbot" class="case-link" target="_blank"
-              rel="noopener">
-              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-              </svg>
-              Ver repositorio <span class="arr">→</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- 03 CONTENT STUDIO -->
-        <article class="case reveal">
-          <div class="case-head">
-            <div>
-              <span class="case-idx">Caso 03 — Argensys IT Services</span>
-              <h3 class="case-name">Content Studio — Producción de contenido con IA</h3>
-              <p class="case-kind">Producto interno · arquitectura, desarrollo y despliegue</p>
-            </div>
-            <span class="case-badge live">En uso interno</span>
-          </div>
-          <div class="case-body">
-            <div class="case-block">
-              <h4>El problema</h4>
-              <p>Producir contenido de marketing consumía horas del equipo cada semana, y el resultado no mantenía una
-                voz de marca consistente entre quien lo escribía y quien lo diseñaba.</p>
-            </div>
-            <div class="case-block">
-              <h4>La solución</h4>
-              <p>Un panel con cuatro módulos: biblioteca de marca que analiza material previo para construir el perfil de
-                la empresa, creador de posteos con slides ya renderizados como imagen, generador de guiones de video, y
-                editor que corta silencios y arma el video vertical con subtítulos.</p>
-            </div>
-            <div class="case-block">
-              <h4>Decisiones sobre el uso de IA</h4>
-              <ul>
-                <li>El motor LLM es <strong>Claude Code en modo headless</strong>, no la API: usa la sesión del plan del
-                  servidor en lugar de facturar por token.</li>
-                <li>Cada llamada se registra con <strong>módulo, duración, resultado y consumo</strong>.</li>
-                <li>Si el plan llega a su límite, la interfaz lo avisa y el pedido queda pendiente para reintentarlo.</li>
-                <li>La aplicación levanta completa aunque el motor de IA no esté configurado.</li>
-              </ul>
-            </div>
-            <div class="case-impact case-block">
-              <h4>Impacto</h4>
-              <p>El equipo pasó de escribir y diseñar cada pieza desde cero a partir de un brief corto, con la voz de
-                marca aplicada automáticamente y los archivos listos para publicar.</p>
-            </div>
-          </div>
-          <div class="case-foot">
-            <span class="tag pill-o">Claude Code CLI</span><span class="tag">FastAPI</span><span
-              class="tag">Python</span>
-            <span class="tag">HTMX · Alpine</span><span class="tag">SQLite</span><span class="tag">Playwright</span>
-            <span class="tag">Remotion</span><span class="tag">Docker</span><span class="tag">VPS Linux</span>
-          </div>
-          <div class="case-links">
-            <span class="case-note">Producto interno de Argensys — código no público</span>
-          </div>
-        </article>
-
-        <!-- 04 CRM ↔ ERP -->
-        <article class="case reveal">
-          <div class="case-head">
-            <div>
-              <span class="case-idx">Caso 04 — Argensys IT Services</span>
-              <h3 class="case-name">CRM ↔ ERP: Bitrix24 con Bejerman y BAS</h3>
-              <p class="case-kind">Integración de sistemas empresariales</p>
-            </div>
-            <span class="case-badge live">Implementado</span>
-          </div>
-          <div class="case-body">
-            <div class="case-block">
-              <h4>El problema</h4>
-              <p>Cuando un negocio se cerraba en el CRM, alguien del equipo administrativo tenía que volver a cargar el
-                cliente y el comprobante de venta a mano en el ERP. Doble carga, demoras y errores de tipeo entre dos
-                sistemas que no estaban pensados para comunicarse.</p>
-            </div>
-            <div class="case-block">
-              <h4>La solución</h4>
-              <p>Dos microservicios que cierran el circuito: uno crea las notas de pedido en <strong>Bejerman</strong>
-                sobre su SDK SOAP, y otro da de alta al cliente en <strong>BAS</strong> cuando el negocio avanza de
-                etapa en Bitrix24.</p>
-            </div>
-            <div class="case-block">
-              <h4>Mi participación</h4>
-              <ul>
-                <li>Relevamiento del contrato SOAP con SoapUI: el ERP no tenía documentación pública de API.</li>
-                <li>Servicio Node.js/Express que arma el comprobante completo —ítems, IVA, punto de venta, condición de
-                  venta— y devuelve la respuesta parseada al CRM.</li>
-                <li>Autenticación <strong>OAuth2</strong> contra BAS con caché y renovación anticipada del token.</li>
-                <li>Despliegue con infraestructura declarada en código.</li>
-              </ul>
-            </div>
-            <div class="case-impact case-block">
-              <h4>Impacto</h4>
-              <p>El equipo de administración dejó de reescribir en el ERP lo que ya estaba cargado en el CRM: los
-                comprobantes y las altas de cliente pasaron a generarse solos al avanzar el negocio.</p>
-            </div>
-          </div>
-          <div class="case-foot">
-            <span class="tag pill-o">SOAP / WSDL</span><span class="tag">OAuth2</span><span class="tag">Bitrix24
-              REST</span>
-            <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Webhooks</span>
-            <span class="tag">Bejerman</span><span class="tag">BAS</span>
-          </div>
-          <div class="case-links">
-            <span class="case-note">Sistemas de cliente — código no público</span>
-          </div>
-        </article>
-
-        <!-- 05 PLATAFORMA BASE -->
-        <article class="case reveal">
-          <div class="case-head">
-            <div>
-              <span class="case-idx">Caso 05 — Producto propio</span>
-              <h3 class="case-name">Plataforma base para sistemas de gestión</h3>
-              <p class="case-kind">Núcleo reutilizable + sistemas verticales por rubro</p>
-            </div>
-            <span class="case-badge">Open source</span>
-          </div>
-          <div class="case-body">
-            <div class="case-block">
-              <h4>El problema</h4>
-              <p>Cada sistema de gestión para una PyME arrancaba de cero repitiendo lo mismo: usuarios, permisos,
-                aislamiento por cliente, eventos, manejo de dinero y fechas. Semanas de trabajo antes de escribir una
-                línea del negocio real.</p>
-            </div>
-            <div class="case-block">
-              <h4>La solución</h4>
-              <p>Extraje el núcleo de Órbita a una base reutilizable sin dominio de negocio: identidad, sesiones,
-                permisos, multi-tenancy con RLS, bus de eventos, cifrado de secretos y puertos de integración con mocks.
-                <strong>Sumar un módulo son tres declaraciones.</strong>
-              </p>
-            </div>
-            <div class="case-block">
-              <h4>Construido encima</h4>
-              <ul>
-                <li><strong>Servicios de electricidad:</strong> clientes, presupuestos, materiales y agenda.</li>
-                <li><strong>Distribución mayorista:</strong> motor de precios con listas, escalas y bonificaciones, más
-                  facturación electrónica.</li>
-                <li><strong>Análisis funcional de cinco rubros</strong> —consultorio, taller, inmobiliaria, servicio
-                  técnico en campo y distribución—, definiendo entidades y reglas de negocio antes de escribir código.
-                </li>
-              </ul>
-            </div>
-            <div class="case-impact case-block">
-              <h4>Por qué importa</h4>
-              <p>La parte difícil —seguridad, aislamiento de datos y trazabilidad— ya está escrita y probada, así que un
-                sistema nuevo arranca directamente por lo que el negocio necesita.</p>
-            </div>
-          </div>
-          <div class="case-foot">
-            <span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Drizzle ORM</span>
-            <span class="tag">PostgreSQL · RLS</span><span class="tag">RBAC</span><span class="tag">Event bus</span>
-            <span class="tag">Ports &amp; adapters</span>
-          </div>
-          <div class="case-links">
-            <a href="https://github.com/santinospingola/gestion-starter" class="case-link primary" target="_blank"
-              rel="noopener">
-              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-              </svg>
-              Ver repositorio <span class="arr">→</span>
-            </a>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- SECUNDARIO -->
-      <h3 class="cat-lbl" style="margin-top:3.5rem">También construí</h3>
-      <div class="mini-grid">
-        <div class="mini reveal">
-          <span class="mini-name">smart-money-tracker</span>
-          <p class="mini-desc">Análisis on-chain multi-cadena que detecta tokens con movimiento anómalo y rankea wallets
-            con un modelo de scoring propio. Incluye un detector de flotas de bots que las identifica cruzando tokens,
-            sobre la base local y sin consumir cuota de APIs.</p>
-          <div class="mini-tags"><span class="tag">TypeScript</span><span class="tag">SQLite</span><span
-              class="tag">Docker</span><span class="tag">Railway</span></div>
-          <div class="case-links" style="margin-top:1rem;padding-top:1rem">
-            <a href="https://github.com/santinospingola/smart-money-tracker" class="case-link" target="_blank"
-              rel="noopener">Repositorio <span class="arr">→</span></a>
-          </div>
-        </div>
-        <div class="mini reveal">
-          <span class="mini-name">Prospección B2B con scoring de IA</span>
-          <p class="mini-desc">Sistema que califica empresas como prospecto con IA, con proveedores intercambiables por
-            configuración (Groq, Gemini, OpenRouter, DeepSeek), prompts versionados y cumplimiento de robots.txt y Ley
-            25.326.</p>
-          <div class="mini-tags"><span class="tag pill-o">LLMs multi-proveedor</span><span
-              class="tag">Python</span><span class="tag">Typer</span></div>
-        </div>
-        <div class="mini reveal">
-          <span class="mini-name">BTC Bot Auto</span>
-          <p class="mini-desc">Bot de trading autónomo sobre BingX Futures: estrategia propia, dimensionamiento de
-            posición desde riesgo fijo, cortes de seguridad automáticos y panel de seguimiento en vivo.</p>
-          <div class="mini-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span
-              class="tag">Render</span><span class="tag">GitHub Actions</span></div>
-        </div>
-      </div>
-
-      <!-- TIRA GITHUB -->
-      <div class="gh-strip reveal">
-        <div class="gh-txt">
-          <h3>Repositorios</h3>
-          <p>Los proyectos que puedo compartir están en GitHub, con su documentación y las decisiones de diseño.</p>
-        </div>
-        <a href="https://github.com/santinospingola" class="gh-btn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-            <path
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-          </svg>
-          Ver mi GitHub
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- EXPERIENCIA -->
-  <section class="section" id="experience">
-    <div class="wrap">
-      <p class="sec-label"><span class="num">03</span> Experiencia</p>
-      <h2 class="sec-title reveal">Dónde<br><em>trabajo</em></h2>
-      <div class="tl">
-        <div class="tl-item reveal">
-          <div class="tl-side">
-            <div class="tl-dot"></div>
-          </div>
-          <div class="tl-card">
-            <div class="tl-top">
-              <div>
-                <h3 class="tl-role">Especialista en Automatización e Integraciones</h3>
-                <p class="tl-co">Argensys IT Services S.R.L.</p>
-              </div>
-              <span class="tl-date">Abr 2025 — Presente</span>
-            </div>
-            <p class="body-txt" style="margin:0 0 1rem;max-width:none">Integración de Bitrix24 con los ERP y plataformas
-              de las empresas cliente, automatización de procesos internos y desarrollo de herramientas con IA para el
-              equipo.</p>
-            <div class="tl-projs">
-              <div class="tl-proj">
-                <span class="tl-proj-name">Herramientas internas con IA</span>
-                <p class="tl-proj-desc">Content Studio y el sistema de prospección con scoring automático. Ver casos 03 y
-                  la sección de abajo.</p>
-                <div class="tl-tags"><span class="tag">Claude</span><span class="tag">FastAPI</span></div>
-              </div>
-              <div class="tl-proj">
-                <span class="tl-proj-name">Integraciones CRM ↔ ERP</span>
-                <p class="tl-proj-desc">Bejerman por SOAP/WSDL y BAS por OAuth2, disparadas desde webhooks de Bitrix24.
-                  Ver caso 04.</p>
-                <div class="tl-tags"><span class="tag">SOAP</span><span class="tag">OAuth2</span></div>
-              </div>
-              <div class="tl-proj">
-                <span class="tl-proj-name">Automatizaciones con n8n</span>
-                <p class="tl-proj-desc">Flujos que conectan el CRM con plataformas de mensajería y de pagos, y que
-                  reemplazan pasos manuales dentro de los procesos comerciales.</p>
-                <div class="tl-tags"><span class="tag">n8n</span><span class="tag">Webhooks</span></div>
-              </div>
-              <div class="tl-proj">
-                <span class="tl-proj-name">Relevamiento, soporte y capacitación</span>
-                <p class="tl-proj-desc">Relevo requerimientos con el cliente, defino metodología y estimación junto a la
-                  gestora de proyectos, y capacito usuarios en CRM y en el uso de IA dentro de sistemas de gestión.</p>
-                <div class="tl-tags"><span class="tag">Consultoría</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STACK -->
-  <section class="section bg-surface" id="stack">
-    <div class="wrap">
-      <p class="sec-label"><span class="num">04</span> Stack tecnológico</p>
-      <h2 class="sec-title reveal">Con qué<br><em>trabajo</em></h2>
-      <div class="stack-grid">
-        <div class="stack-cat reveal">
-          <h3 class="cat-lbl">IA aplicada</h3>
-          <div class="pills">
-            <span class="pill pill-o">Claude API</span><span class="pill pill-o">Claude Code headless</span>
-            <span class="pill">Agentes</span><span class="pill">Prompt engineering</span>
-            <span class="pill">LLMs multi-proveedor</span><span class="pill">MCP</span>
-          </div>
-        </div>
-        <div class="stack-cat reveal">
-          <h3 class="cat-lbl">Automatización &amp; APIs</h3>
-          <div class="pills">
-            <span class="pill pill-o">n8n</span><span class="pill">REST</span>
-            <span class="pill">SOAP / WSDL</span><span class="pill">Webhooks</span><span class="pill">OAuth2</span>
-          </div>
-        </div>
-        <div class="stack-cat reveal">
-          <h3 class="cat-lbl">CRM &amp; ERP</h3>
-          <div class="pills">
-            <span class="pill pill-o">Bitrix24</span><span class="pill">Bejerman</span><span class="pill">BAS</span>
-          </div>
-        </div>
-        <div class="stack-cat reveal">
-          <h3 class="cat-lbl">Backend</h3>
-          <div class="pills">
-            <span class="pill">Python</span><span class="pill">TypeScript</span><span class="pill">Node.js</span>
-            <span class="pill">FastAPI</span><span class="pill">Express</span>
-          </div>
-        </div>
-        <div class="stack-cat reveal">
-          <h3 class="cat-lbl">Datos &amp; frontend</h3>
-          <div class="pills">
-            <span class="pill">PostgreSQL</span><span class="pill">Drizzle ORM</span><span class="pill">SQLite</span>
-            <span class="pill">Next.js 15</span><span class="pill">React 19</span><span class="pill">Tailwind</span>
-          </div>
-        </div>
-        <div class="stack-cat reveal">
-          <h3 class="cat-lbl">Arquitectura &amp; infra</h3>
-          <div class="pills">
-            <span class="pill">Multi-tenancy · RLS</span><span class="pill">RBAC</span><span class="pill">Event bus</span>
-            <span class="pill">Docker</span><span class="pill">Vercel</span><span class="pill">Supabase</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICACIONES -->
-  <section class="section" id="certifications">
-    <div class="wrap">
-      <p class="sec-label"><span class="num">05</span> Certificaciones</p>
-      <div class="cert-top reveal">
-        <div>
-          <div class="anth-badge">
-            <span class="anth-icon">⬡</span>
-            <div>
-              <span class="anth-name">Anthropic Academy</span>
-              <span class="anth-sub">2026</span>
-            </div>
-          </div>
-          <h2 class="sec-title" style="margin-bottom:0">Certificaciones<br><em>verificables</em></h2>
-        </div>
-      </div>
-      <div class="cert-grid" id="cert-grid"></div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section class="section contact-sec" id="contact">
-    <div class="wrap">
-      <p class="sec-label dark"><span class="num">06</span> Contacto</p>
-      <div class="contact-grid reveal">
-        <h2 class="contact-title">¿Tenés un proceso<br>que <em>debería resolverse solo?</em></h2>
-        <div class="contact-right">
-          <p class="body-txt contact-txt">Tomo proyectos de IA aplicada, automatización de procesos e integración entre
-            sistemas. Contame qué proceso querés resolver y coordinamos una llamada.</p>
-          <a href="mailto:santinospingola12@gmail.com" class="email-block">
-            <span class="email-lbl">Email directo</span>
-            <span class="email-addr">santinospingola12@gmail.com</span>
-          </a>
-          <a href="mailto:santinospingola12@gmail.com" class="btn-primary btn-light">Enviar mensaje<span
-              class="btn-arrow">→</span></a>
-          <div class="social-row">
-            <a href="https://github.com/santinospingola" class="social-link" target="_blank" rel="noopener">
-              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                <path
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-              </svg>
-              GitHub
-            </a>
-            <!-- TODO Santino: completá tu LinkedIn y descomentá
-            <a href="https://www.linkedin.com/in/USUARIO" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
-            -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <span class="f-logo">Santino.</span>
-      <span class="f-copy">© 2026 Santino Spingola</span>
-      <span class="f-live"><span class="live-dot small"></span>Sistema activo</span>
-    </div>
+    <p class="copyright">© 2026 Santino Spingola. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- PANEL — secciones y casos -->
+  <div class="panel" id="panel" role="dialog" aria-modal="true" aria-label="Detalle">
+    <div class="panel-top">
+      <a href="#" class="panel-logo" data-close aria-label="Volver al inicio">
+        <span>Santino</span><span>Spingola</span>
+      </a>
+      <nav class="panel-nav" aria-label="Secciones">
+        <a href="#sobre-mi" class="nav-link"><span>01</span> <strong>sobre mí</strong></a>
+        <a href="#proyectos" class="nav-link"><span>02</span> <strong>proyectos</strong></a>
+        <a href="#contacto" class="nav-link"><span>03</span> <strong>contacto</strong></a>
+      </nav>
+      <button type="button" class="panel-close" id="panel-close" data-close aria-label="Cerrar"></button>
+    </div>
+
+    <!-- SOBRE MÍ -->
+    <article class="sheet" id="sobre-mi" data-title="Sobre mí">
+      <div class="sheet-lead">
+        <p class="kicker">01 — Sobre mí</p>
+        <h2 class="case-title">Sobre mí</h2>
+        <h3 class="lead">Construyo sistemas con IA que las empresas usan todos los días: integraciones, automatizaciones
+          y software de gestión que le ahorran horas al equipo y se notan en la facturación.</h3>
+        <p>Santino Spingola, desarrollador de IA aplicada y automatización. Programo desde
+          los 15 años. A los 18, al egresar de un secundario técnico, empecé a trabajar para empresas integrando sus
+          sistemas y automatizando procesos. Hoy hago ese mismo trabajo con la IA como herramienta central.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Enfoque</h5>
+          <p>Mi foco está en crear: sistemas y aplicaciones que funcionan en producción, con usuarios reales resolviendo
+            problemas concretos. La IA me permite construir más rápido. El criterio técnico que formé en estos años es lo
+            que hace que cada solución funcione en la operación diaria y genere un ahorro de tiempo real.</p>
+        </section>
+        <section class="block">
+          <h5>Cómo trabajo</h5>
+          <ul>
+            <li>Relevo el proceso con las áreas que lo van a usar.</li>
+            <li>Defino la arquitectura, desarrollo y despliego.</li>
+            <li>Capacito al equipo y dejo todo documentado para que no dependa de mí.</li>
+          </ul>
+        </section>
+        <section class="block">
+          <h5>Disponibilidad</h5>
+          <h6>Nuevos proyectos —</h6>
+          <p>Trabajo remoto, con clientes de cualquier ubicación.</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>En números</h5>
+          <ul class="numbers">
+            <li><strong>25+</strong> proyectos desarrollados</li>
+            <li><strong>6</strong> empresas cliente</li>
+            <li><strong>18</strong> automatizaciones e integraciones</li>
+          </ul>
+        </section>
+        <section class="block">
+          <h5>Hablemos</h5>
+          <p>Si tu equipo pierde horas en un proceso manual, contame cuál es y vemos cómo automatizarlo.</p>
+          <p class="gap"><a class="u" href="#contacto"><strong>Contacto →</strong></a><br>
+            <a class="u" href="#proyectos"><strong>Ver proyectos →</strong></a></p>
+        </section>
+      </div>
+    </article>
+
+    <!-- EXPERIENCIA -->
+    <article class="sheet" id="experiencia" data-title="Experiencia">
+      <div class="sheet-lead">
+        <p class="kicker">02 — Experiencia · Abr 2025 — Presente</p>
+        <h2 class="case-title">Argensys</h2>
+        <h3 class="lead">AI Engineer independiente para Argensys IT Services: diseño e implemento integraciones,
+          automatizaciones y agentes de IA para sus empresas clientes, desde la auditoría del proceso hasta la puesta en
+          producción.</h3>
+        <p>Me reúno con cada cliente, audito sus procesos y propongo oportunidades de automatización. Cuando la empresa
+          ya llega con una idea, la bajo a una solución concreta y la implemento.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Integraciones</h5>
+          <h6>Bitrix24 ↔ BAS —</h6>
+          <p>Integración bidireccional que automatiza el alta de clientes, con middleware y backend propios sobre la
+            API de BAS.</p>
+          <h6>Bitrix24 ↔ Bejerman —</h6>
+          <p>Procesamiento automático de notas de pedido vía SOAP, con middleware y backend propios. Les ahorra horas
+            de carga manual a los comerciales.</p>
+          <p><a class="u" href="#crm-erp"><strong>Ver caso →</strong></a></p>
+          <h6>Bitrix24 de punta a punta —</h6>
+          <p>API, embudos de venta, automatizaciones y configuración completa de la plataforma para cada cliente.</p>
+          <p><a class="u" href="#bitrix24"><strong>Ver caso →</strong></a></p>
+        </section>
+        <section class="block">
+          <h5>Sistemas y APIs que integré</h5>
+          <h6>Gestión comercial y ERP —</h6>
+          <p>Bitrix24 REST API · Bejerman (SOAP) · BAS API · ARCA (factura electrónica) · Hotmart</p>
+          <h6>Mensajería y atención —</h6>
+          <p>WhatsApp Business API · Telegram API · Email · contact centers externos</p>
+          <h6>IA y datos —</h6>
+          <p>Claude API · Gemini API · Groq · OpenRouter · DeepSeek · Google Maps API</p>
+          <h6>Automatización —</h6>
+          <p>n8n · Webhooks · middleware propio en Node.js</p>
+          <h6>Lenguajes full stack —</h6>
+          <p>Python · JavaScript · TypeScript · Node.js · PHP · SQL</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Automatización e IA</h5>
+          <h6>Contact centers con agentes de IA —</h6>
+          <p>Integré Bitrix24 con contact centers externos y automaticé la gestión de conversaciones con leads por
+            WhatsApp mediante agentes de IA.</p>
+          <p><a class="u" href="#contact-center"><strong>Ver caso →</strong></a></p>
+          <h6>Notificaciones automáticas —</h6>
+          <p>Avisos por mail y WhatsApp disparados desde Bitrix24 y orquestados con n8n.</p>
+          <p><a class="u" href="#notificaciones"><strong>Ver caso →</strong></a></p>
+          <h6>Contenido con IA —</h6>
+          <p>Sistema de creación y edición automática de contenido con IA integrada, desarrollado para Argensys.</p>
+          <p><a class="u" href="#content-studio"><strong>Ver caso →</strong></a></p>
+          <h6>Prospección automática —</h6>
+          <p>Sistemas que detectan empresas prospecto a partir de Google Maps y las califican con IA.</p>
+          <p><a class="u" href="#prospeccion"><strong>Ver caso →</strong></a></p>
+        </section>
+        <section class="block">
+          <h5>Proceso con cada cliente</h5>
+          <ul>
+            <li>Reunión inicial y auditoría de procesos.</li>
+            <li>Propuesta de automatización o diseño de la idea del cliente.</li>
+            <li>Desarrollo, puesta en producción y capacitación.</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <!-- PROYECTOS -->
+    <article class="sheet" id="proyectos" data-title="Proyectos">
+      <div class="sheet-lead">
+        <p class="kicker">03 — Proyectos</p>
+        <h2 class="case-title">Proyectos</h2>
+        <h3 class="lead">Integraciones, automatizaciones y agentes de IA para empresas clientes, más productos propios
+          en producción.</h3>
+        <p>Cada caso cuenta el problema, la solución, las decisiones técnicas y el resultado. El código que puedo
+          compartir está en GitHub, con su documentación.</p>
+        <p class="links"><a class="u" href="https://github.com/SantinoSpingola/" target="_blank" rel="noopener"><strong>Ver mi GitHub →</strong></a></p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Para clientes · Argensys</h5>
+          <ul class="index">
+            <li><a href="#crm-erp"><span>01</span><strong>CRM × ERP</strong><em>Bitrix24 con Bejerman y BAS</em></a></li>
+            <li><a href="#contact-center"><span>02</span><strong>Contact center con IA</strong><em>Agentes de IA en WhatsApp</em></a></li>
+            <li><a href="#notificaciones"><span>03</span><strong>Notificaciones automáticas</strong><em>Mail y WhatsApp con n8n</em></a></li>
+            <li><a href="#bitrix24"><span>04</span><strong>Bitrix24 a medida</strong><em>API, embudos y automatizaciones</em></a></li>
+            <li><a href="#content-studio"><span>05</span><strong>Content Studio</strong><em>Contenido automático con IA</em></a></li>
+            <li><a href="#prospeccion"><span>06</span><strong>Prospección B2B</strong><em>Google Maps + scoring con IA</em></a></li>
+          </ul>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Productos propios</h5>
+          <ul class="index">
+            <li><a href="#gestion-arca"><span>07</span><strong>Sistema de gestión</strong><em>Clientes, Content Studio y facturación ARCA</em></a></li>
+            <li><a href="#orbita"><span>08</span><strong>Órbita</strong><em>Gestión comercial multi-tenant</em></a></li>
+            <li><a href="#asesor-ia"><span>09</span><strong>Asesor virtual con IA</strong><em>IA conversacional · demo pública</em></a></li>
+            <li><a href="#plataforma-base"><span>10</span><strong>Plataforma base</strong><em>Núcleo para sistemas de gestión</em></a></li>
+          </ul>
+        </section>
+        <section class="block">
+          <h5>También construí</h5>
+          <ul class="index">
+            <li><a href="#smart-money"><span>11</span><strong>smart-money-tracker</strong><em>Análisis on-chain</em></a></li>
+            <li><a href="#btc-bot"><span>12</span><strong>BTC Bot Auto</strong><em>Trading autónomo</em></a></li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <!-- STACK -->
+    <article class="sheet" id="stack" data-title="Stack">
+      <div class="sheet-lead">
+        <p class="kicker">04 — Stack tecnológico</p>
+        <h2 class="case-title">Stack</h2>
+        <h3 class="lead">Lo que uso para llevar IA a producción: modelos de lenguaje, orquestación con n8n, integración
+          con CRM y ERP, y un backend tipado sobre una base de datos multi-tenant.</h3>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Servicios</h5>
+          <h6>IA aplicada —</h6>
+          <ul>
+            <li>Claude API · Claude Code headless</li>
+            <li>Agentes · MCP · Prompt engineering</li>
+            <li>LLMs multi-proveedor</li>
+          </ul>
+          <h6>Automatización &amp; APIs —</h6>
+          <ul>
+            <li>n8n · REST · Webhooks</li>
+            <li>WhatsApp Business API · Telegram API</li>
+            <li>SOAP / WSDL · Middleware</li>
+          </ul>
+          <h6>CRM, ERP y facturación —</h6>
+          <ul>
+            <li>Bitrix24 · Bejerman · BAS · Hotmart</li>
+            <li>ARCA · factura electrónica</li>
+          </ul>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Desarrollo full stack</h5>
+          <h6>Lenguajes —</h6>
+          <ul>
+            <li>Python · JavaScript · TypeScript</li>
+            <li>PHP · SQL · HTML / CSS</li>
+          </ul>
+          <h6>Backend —</h6>
+          <ul>
+            <li>Node.js · FastAPI · Express</li>
+            <li>APIs REST · SOAP · Webhooks</li>
+          </ul>
+          <h6>Bases de datos —</h6>
+          <ul>
+            <li>PostgreSQL · SQLite · Supabase</li>
+            <li>Drizzle ORM · Row Level Security</li>
+          </ul>
+          <h6>Frontend —</h6>
+          <ul>
+            <li>Next.js 15 · React 19 · Tailwind</li>
+            <li>HTMX · Alpine.js</li>
+          </ul>
+          <h6>Arquitectura &amp; infra —</h6>
+          <ul>
+            <li>Multi-tenancy · RLS · RBAC · Event bus</li>
+            <li>Docker · Vercel · VPS Linux</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <!-- CERTIFICACIONES -->
+    <article class="sheet" id="certificaciones" data-title="Certificaciones">
+      <div class="sheet-lead">
+        <p class="kicker">05 — Certificaciones · 2026</p>
+        <h2 class="case-title">Certifi&shy;caciones</h2>
+        <h3 class="lead">Formación en Claude, Claude Code, Claude Cowork y AI Fluency, con certificados de Anthropic
+          Academy.</h3>
+        <p>Cada certificado enlaza a su verificación pública.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Anthropic Academy</h5>
+          <ul id="cert-list" class="certs"></ul>
+        </section>
+      </div>
+    </article>
+
+    <!-- CONTACTO -->
+    <article class="sheet" id="contacto" data-title="Contacto">
+      <div class="sheet-lead">
+        <p class="kicker">06 — Contacto</p>
+        <h2 class="case-title">Contacto</h2>
+        <h3 class="lead">Si tu equipo pierde horas en un proceso manual, se puede automatizar.</h3>
+        <p>Escribime qué pasa hoy, qué sistemas usan y cuánto tiempo les lleva. Con eso coordinamos una llamada y te
+          digo qué se puede resolver con IA, automatización o una integración.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Email directo</h5>
+          <p><a class="u" href="mailto:santinospingola12@gmail.com"><strong>santinospingola12@gmail.com</strong></a></p>
+        </section>
+        <section class="block">
+          <h5>Teléfono</h5>
+          <p><a class="u" href="tel:+5491168792883"><strong>+54 9 11 6879-2883</strong></a><br>
+            <a class="u" href="https://wa.me/5491168792883" target="_blank" rel="noopener"><strong>Escribir por WhatsApp →</strong></a></p>
+        </section>
+        <section class="block">
+          <h5>Redes</h5>
+          <p><a class="u" href="https://www.instagram.com/spingola.ai/" target="_blank" rel="noopener"><strong>Instagram — @spingola.ai</strong></a><br>
+            <a class="u" href="https://www.tiktok.com/@spingola.software" target="_blank" rel="noopener"><strong>TikTok — @spingola.software</strong></a><br>
+            <a class="u" href="https://github.com/SantinoSpingola/" target="_blank" rel="noopener"><strong>GitHub — SantinoSpingola</strong></a></p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Modalidad</h5>
+          <p>Trabajo remoto, con clientes de cualquier ubicación.</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 07 GESTIÓN + ARCA -->
+    <article class="sheet" id="gestion-arca" data-title="Sistema de gestión con facturación ARCA">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · Caso 07 — Producto propio · En uso</p>
+        <h2 class="case-title">Sistema de gestión</h2>
+        <h3 class="lead">Sistema de gestión propio que organiza todos mis clientes al mismo tiempo, integra Content
+          Studio para producir su contenido y factura de forma automática a través de ARCA.</h3>
+        <p>Llevar varios clientes a la vez implica hacer seguimiento, producir contenido y facturar, casi siempre en
+          herramientas separadas. Este sistema reúne todo en un solo panel.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Gestión de clientes</h5>
+          <p>Todos los clientes organizados al mismo tiempo: datos, contenido y facturación de cada uno en un mismo
+            lugar.</p>
+        </section>
+        <section class="block">
+          <h5>Content Studio integrado</h5>
+          <ul>
+            <li>Edición de video.</li>
+            <li>Creación de contenido.</li>
+            <li>Generación de guiones de video.</li>
+          </ul>
+          <p class="gap"><a class="u" href="#content-studio"><strong>Ver Content Studio →</strong></a></p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Facturación con ARCA</h5>
+          <p>Conectado a los web services de facturación electrónica de ARCA: las facturas a clientes se emiten solas,
+            cada una con su CAE, sin cargar comprobantes a mano.</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 08 ÓRBITA -->
+    <article class="sheet" id="orbita" data-title="Órbita">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · Caso 08 — Producto propio · En producción</p>
+        <h2 class="case-title">Órbita</h2>
+        <h3 class="lead">Plataforma de gestión comercial multi-tenant: contactos, catálogo con precios y promociones
+          vigentes, pipeline con cronómetro de primera respuesta y las conversaciones de WhatsApp dentro del mismo
+          sistema.</h3>
+        <p>Un equipo comercial vendía sobre planillas compartidas y mensajes directos. Nadie sabía cuánto tardaba el
+          equipo en responder un lead, las oportunidades se enfriaban sin que nadie lo notara, y el dueño no podía ver
+          el rendimiento del equipo sin preguntar uno por uno.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Mi participación</h5>
+          <h6>Desarrollador único —</h6>
+          <ul>
+            <li>Arquitectura, base de datos, backend, interfaz, pruebas y despliegue: todo.</li>
+            <li>5 módulos, 35 tablas, ~27.700 líneas de TypeScript.</li>
+            <li>169 pruebas automatizadas y 6 compuertas de calidad en verde.</li>
+          </ul>
+        </section>
+        <section class="block">
+          <h5>Producción</h5>
+          <ul>
+            <li>Supabase y Vercel en São Paulo, con driver dual: Postgres embebido en desarrollo y pruebas.</li>
+            <li>Capacitación y soporte continuo al equipo comercial que lo opera a diario.</li>
+          </ul>
+        </section>
+        <section class="block">
+          <h5>Impacto</h5>
+          <p>El equipo dejó las planillas: hoy opera dentro del sistema, con WhatsApp, pipeline y catálogo en un solo
+            lugar. Su núcleo se volvió la base de todos mis sistemas siguientes.</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Decisiones de ingeniería</h5>
+          <h6>Aislamiento por RLS en la base —</h6>
+          <p>No en el código, con una prueba que intenta la fuga entre empresas.</p>
+          <h6>Bus de eventos persistido —</h6>
+          <p>Outbox transaccional, manejadores idempotentes y cola de fallidos operable.</p>
+          <h6>Puertos y adaptadores —</h6>
+          <p>8 integraciones con dobles funcionales, incluido un puerto de IA para clasificación y resúmenes.</p>
+          <h6>Capa anticorrupción —</h6>
+          <p>Sobre la API de WhatsApp: tolera payloads desconocidos sin cortar el servicio.</p>
+        </section>
+        <section class="block">
+          <h5>Stack</h5>
+          <p>Next.js 15 · React 19 · TypeScript · Drizzle ORM · PostgreSQL · RLS · Supabase · WhatsApp API · n8n ·
+            Vitest</p>
+          <p class="note">Código privado — contiene datos de cliente.</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 09 ASESOR VIRTUAL IA -->
+    <article class="sheet" id="asesor-ia" data-title="Asesor virtual con IA">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · Caso 09 — IA conversacional · Demo pública</p>
+        <h2 class="case-title">Asesor Virtual</h2>
+        <h3 class="lead">Un agente conversacional para inmobiliarias que responde disponibilidad, condiciones y
+          requisitos, agenda visitas dentro de la misma conversación, analiza imágenes de propiedades y mantiene el
+          contexto entre mensajes.</h3>
+        <p>Una inmobiliaria recibe todos los días las mismas consultas: si la propiedad sigue disponible, qué requisitos
+          piden, cuánto es el depósito, si se puede visitar el sábado. Llegan fuera de horario, se acumulan, y cada
+          respuesta tardía es una visita que no se agenda.</p>
+        <p class="links">
+          <a class="u" href="https://sistema-inmobiliarias.vercel.app" target="_blank" rel="noopener"><strong>Probar el demo →</strong></a>
+          <a class="u" href="https://github.com/santinospingola/argensys-chatbot" target="_blank" rel="noopener"><strong>Ver repositorio →</strong></a>
+        </p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Arquitectura</h5>
+          <h6>Interfaz —</h6>
+          <p>Next.js sobre Vercel; la lógica del agente vive en un flujo de n8n.</p>
+          <h6>El webhook nunca llega al navegador —</h6>
+          <p>El cliente llama a <code>/api/chat</code> y el servidor reenvía a n8n.</p>
+          <h6>Memoria —</h6>
+          <p>El contexto se sostiene con un sessionId; la memoria vive en el flujo, no en la interfaz.</p>
+          <h6>Lectura defensiva —</h6>
+          <p>La respuesta de n8n se lee de forma defensiva, para que ajustar el flujo no rompa la interfaz.</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Por qué importa</h5>
+          <p>El comportamiento del asistente se ajusta editando el flujo en n8n, sin tocar código ni volver a
+            desplegar. Cambiar una respuesta o sumar un dato que consulte lleva minutos.</p>
+        </section>
+        <section class="block">
+          <h5>Stack</h5>
+          <p>IA conversacional · n8n · Next.js · TypeScript · Tailwind · Vercel</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 05 CONTENT STUDIO -->
+    <article class="sheet" id="content-studio" data-title="Content Studio">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · Caso 05 — Argensys IT Services · En uso interno</p>
+        <h2 class="case-title">Content Studio</h2>
+        <h3 class="lead">Sistema de creación y edición automática de contenido con IA, desarrollado para Argensys:
+          biblioteca de marca, creador de posteos con slides renderizados, generador de guiones y editor que arma el
+          video vertical con subtítulos.</h3>
+        <p>Producir contenido de marketing consumía horas del equipo cada semana, y el resultado no mantenía una voz de
+          marca consistente entre quien lo escribía y quien lo diseñaba.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Decisiones sobre el uso de IA</h5>
+          <h6>Claude Code en modo headless —</h6>
+          <p>No la API: usa la sesión del plan del servidor en lugar de facturar por token.</p>
+          <h6>Registro de consumo —</h6>
+          <p>Cada llamada se registra con módulo, duración, resultado y consumo.</p>
+          <h6>Límite del plan —</h6>
+          <p>Si el plan llega a su límite, la interfaz lo avisa y el pedido queda pendiente para reintentarlo.</p>
+          <h6>Degradación controlada —</h6>
+          <p>La aplicación levanta completa aunque el motor de IA no esté configurado.</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Impacto</h5>
+          <p>El equipo pasó de escribir y diseñar cada pieza desde cero a partir de un brief corto, con la voz de marca
+            aplicada automáticamente y los archivos listos para publicar.</p>
+        </section>
+        <section class="block">
+          <h5>Stack</h5>
+          <p>Claude Code CLI · FastAPI · Python · HTMX · Alpine · SQLite · Playwright · Remotion · Docker · VPS Linux</p>
+          <p class="note">Producto interno de Argensys — código no público.</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 01 CRM ↔ ERP -->
+    <article class="sheet" id="crm-erp" data-title="CRM ↔ ERP">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · Caso 01 — Argensys IT Services · Implementado</p>
+        <h2 class="case-title">CRM × ERP</h2>
+        <h3 class="lead">Dos integraciones bidireccionales con middleware y backend propios: Bitrix24 ↔ Bejerman procesa
+          las notas de pedido y Bitrix24 ↔ BAS automatiza el alta de clientes.</h3>
+        <p>Cuando un negocio se cerraba en Bitrix24, alguien del equipo tenía que volver a cargar el cliente y la nota
+          de pedido a mano en el ERP. Doble carga, demoras y errores de tipeo entre dos
+          sistemas que no estaban pensados para comunicarse.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Mi participación</h5>
+          <h6>Middleware con backend propio —</h6>
+          <p>Cada integración corre sobre un servicio Node.js / Express que traduce entre Bitrix24 y el ERP en ambos
+            sentidos.</p>
+          <h6>Bejerman vía SOAP —</h6>
+          <p>Relevé el contrato SOAP con SoapUI, porque el ERP no tenía documentación pública. El servicio arma la nota
+            de pedido completa —ítems, IVA, punto de venta, condición de venta— y devuelve la respuesta a Bitrix24.</p>
+          <h6>BAS vía API —</h6>
+          <p>Alta de clientes sincronizada entre Bitrix24 y BAS en los dos sentidos.</p>
+          <h6>Despliegue —</h6>
+          <p>Con infraestructura declarada en código.</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Impacto</h5>
+          <p>Los comerciales dejaron de cargar notas de pedido a mano y las altas de cliente dejaron de duplicarse:
+            todo se genera solo cuando el negocio avanza en Bitrix24. Son horas de carga manual que el equipo recuperó
+            para vender.</p>
+        </section>
+        <section class="block">
+          <h5>Stack</h5>
+          <p>SOAP / WSDL · API REST · Bitrix24 REST · Node.js · Express · Webhooks · Middleware · Bejerman · BAS</p>
+          <p class="note">Sistemas de cliente — código no público.</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 02 CONTACT CENTER CON IA -->
+    <article class="sheet" id="contact-center" data-title="Contact center con agentes de IA">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · Caso 02 — Argensys IT Services</p>
+        <h2 class="case-title">Contact Center IA</h2>
+        <h3 class="lead">Bitrix24 integrado con contact centers externos, con agentes de IA que gestionan las
+          conversaciones con leads por WhatsApp.</h3>
+        <p>Los leads que escriben por WhatsApp esperan una respuesta inmediata. Cuando la atención depende solo del
+          equipo, las consultas se acumulan fuera de horario y en los picos de demanda, y parte de esos contactos se
+          pierde antes de llegar a un comercial.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>La solución</h5>
+          <h6>Integración con Bitrix24 —</h6>
+          <p>Conexión entre Bitrix24 y contact centers externos, para que la gestión de leads quede centralizada en la
+            misma plataforma comercial.</p>
+          <h6>Agentes de IA en WhatsApp —</h6>
+          <p>Agentes que gestionan de forma automática las conversaciones con leads por WhatsApp.</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Impacto</h5>
+          <p>Cada lead recibe atención inmediata, a cualquier hora, sin sumar personal al equipo.</p>
+        </section>
+        <section class="block">
+          <h5>Stack</h5>
+          <p>Bitrix24 · Contact center · WhatsApp · Agentes de IA · API REST</p>
+          <p class="note">Sistemas de cliente — código no público.</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 03 NOTIFICACIONES -->
+    <article class="sheet" id="notificaciones" data-title="Notificaciones automáticas">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · Caso 03 — Argensys IT Services</p>
+        <h2 class="case-title">Notifica&shy;ciones</h2>
+        <h3 class="lead">Avisos automáticos por mail y WhatsApp, disparados desde Bitrix24 y orquestados con n8n.</h3>
+        <p>Muchos avisos de un proceso comercial, tanto a clientes como al propio equipo, dependían de que alguien los
+          mandara a mano en el momento justo.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>La solución</h5>
+          <h6>Disparadores en Bitrix24 —</h6>
+          <p>Los eventos de Bitrix24 activan los flujos mediante webhooks.</p>
+          <h6>Orquestación con n8n —</h6>
+          <p>n8n arma cada mensaje y lo envía por el canal que corresponde: mail o WhatsApp.</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Impacto</h5>
+          <p>Los avisos salen siempre y a tiempo, sin depender de que una persona se acuerde de enviarlos.</p>
+        </section>
+        <section class="block">
+          <h5>Stack</h5>
+          <p>Bitrix24 · n8n · Webhooks · WhatsApp · Email</p>
+          <p class="note">Sistemas de cliente — código no público.</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 04 BITRIX24 -->
+    <article class="sheet" id="bitrix24" data-title="Implementación de Bitrix24">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · Caso 04 — Argensys IT Services</p>
+        <h2 class="case-title">Bitrix24</h2>
+        <h3 class="lead">Implementación y administración de Bitrix24 de punta a punta para empresas clientes: API,
+          embudos de venta y automatizaciones.</h3>
+        <p>Una plataforma comercial genérica no se adapta sola al proceso de cada empresa. Sin embudos bien definidos
+          ni automatizaciones, el equipo termina trabajando por fuera de la herramienta.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Qué incluye</h5>
+          <h6>Embudos de venta —</h6>
+          <p>Embudos y etapas diseñados a medida del proceso comercial de cada cliente.</p>
+          <h6>Automatizaciones —</h6>
+          <p>Automatizaciones internas que eliminan pasos manuales del proceso comercial.</p>
+          <h6>API —</h6>
+          <p>Desarrollo sobre la API de Bitrix24 para conectarlo con ERP, contact centers, n8n y otros sistemas.</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Impacto</h5>
+          <p>Bitrix24 pasa a ser el centro de la operación comercial. Las integraciones y automatizaciones de esta
+            sección se apoyan sobre esa base.</p>
+          <p class="gap"><a class="u" href="#crm-erp"><strong>CRM × ERP →</strong></a><br>
+            <a class="u" href="#contact-center"><strong>Contact center con IA →</strong></a><br>
+            <a class="u" href="#notificaciones"><strong>Notificaciones →</strong></a></p>
+        </section>
+        <section class="block">
+          <h5>Sistemas que conecté a Bitrix24</h5>
+          <p>Bejerman (SOAP) · BAS API · Hotmart · n8n · WhatsApp Business API · contact centers externos</p>
+          <p class="note">Sistemas de cliente — código no público.</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 10 PLATAFORMA BASE -->
+    <article class="sheet" id="plataforma-base" data-title="Plataforma base">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · Caso 10 — Producto propio · Open source</p>
+        <h2 class="case-title">Plataforma Base</h2>
+        <h3 class="lead">El núcleo de Órbita extraído a una base reutilizable sin dominio de negocio: identidad,
+          sesiones, permisos, multi-tenancy con RLS, bus de eventos, cifrado de secretos y puertos de integración.
+          Sumar un módulo son tres declaraciones.</h3>
+        <p>Cada sistema de gestión para una PyME arrancaba de cero repitiendo lo mismo: usuarios, permisos, aislamiento
+          por cliente, eventos, manejo de dinero y fechas. Semanas de trabajo antes de escribir una línea del negocio
+          real.</p>
+        <p class="links">
+          <a class="u" href="https://github.com/santinospingola/gestion-starter" target="_blank" rel="noopener"><strong>Ver repositorio →</strong></a>
+        </p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Construido encima</h5>
+          <h6>Servicios de electricidad —</h6>
+          <p>Clientes, presupuestos, materiales y agenda.</p>
+          <h6>Distribución mayorista —</h6>
+          <p>Motor de precios con listas, escalas y bonificaciones, más facturación electrónica.</p>
+          <h6>Análisis funcional de cinco rubros —</h6>
+          <p>Consultorio, taller, inmobiliaria, servicio técnico en campo y distribución, definiendo entidades y reglas
+            de negocio antes de escribir código.</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Por qué importa</h5>
+          <p>La parte difícil —seguridad, aislamiento de datos y trazabilidad— ya está escrita y probada, así que un
+            sistema nuevo arranca directamente por lo que el negocio necesita.</p>
+        </section>
+        <section class="block">
+          <h5>Stack</h5>
+          <p>Next.js · TypeScript · Drizzle ORM · PostgreSQL · RLS · RBAC · Event bus · Ports &amp; adapters</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 11 SMART MONEY -->
+    <article class="sheet" id="smart-money" data-title="smart-money-tracker">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · También construí — 11</p>
+        <h2 class="case-title">Smart Money</h2>
+        <h3 class="lead">Análisis on-chain multi-cadena que detecta tokens con movimiento anómalo y rankea wallets con
+          un modelo de scoring propio.</h3>
+        <p>Incluye un detector de flotas de bots que las identifica cruzando tokens, sobre la base local y sin consumir
+          cuota de APIs.</p>
+        <p class="links">
+          <a class="u" href="https://github.com/santinospingola/smart-money-tracker" target="_blank" rel="noopener"><strong>Ver repositorio →</strong></a>
+        </p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Stack</h5>
+          <p>TypeScript · SQLite · Docker · Railway</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 06 PROSPECCIÓN -->
+    <article class="sheet" id="prospeccion" data-title="Prospección B2B con IA">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · Caso 06 — Argensys IT Services</p>
+        <h2 class="case-title">Prospección B2B</h2>
+        <h3 class="lead">Sistemas de prospección automática: detectan empresas en Google Maps y las califican como
+          prospecto con IA.</h3>
+        <p>Armar listas de prospectos a mano lleva horas de búsqueda, y la calificación queda librada al criterio de
+          cada persona.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Cómo funciona</h5>
+          <h6>Fuente: Google Maps —</h6>
+          <p>Búsqueda automática de empresas como punto de partida de la prospección.</p>
+          <h6>Scoring con IA —</h6>
+          <p>Cada empresa se califica con modelos de lenguaje. Los proveedores se cambian por configuración: Groq,
+            Gemini, OpenRouter y DeepSeek.</p>
+          <h6>Prompts versionados —</h6>
+          <p>Los criterios de calificación se ajustan sin tocar el código.</p>
+          <h6>Cumplimiento —</h6>
+          <p>Respeta robots.txt y la Ley 25.326 de protección de datos personales.</p>
+        </section>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Impacto</h5>
+          <p>El equipo comercial trabaja sobre una lista priorizada en lugar de buscar empresa por empresa.</p>
+        </section>
+        <section class="block">
+          <h5>Stack</h5>
+          <p>Python · Typer · Google Maps · LLMs multi-proveedor</p>
+          <p class="note">Producto interno de Argensys — código no público.</p>
+        </section>
+      </div>
+    </article>
+
+    <!-- 12 BTC BOT -->
+    <article class="sheet" id="btc-bot" data-title="BTC Bot Auto">
+      <div class="sheet-lead">
+        <p class="kicker"><a class="u" href="#proyectos">← Proyectos</a> · También construí — 12</p>
+        <h2 class="case-title">BTC Bot</h2>
+        <h3 class="lead">Bot de trading autónomo sobre BingX Futures: estrategia propia, dimensionamiento de posición
+          desde riesgo fijo y cortes de seguridad automáticos.</h3>
+        <p>Con panel de seguimiento en vivo.</p>
+      </div>
+      <div class="sheet-col">
+        <section class="block">
+          <h5>Stack</h5>
+          <p>Python · FastAPI · Render · GitHub Actions</p>
+        </section>
+      </div>
+    </article>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
