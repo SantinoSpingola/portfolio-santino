@@ -1,56 +1,35 @@
-# Portfolio Santino Spingola
+# Portfolio — Santino Spingola
 
-## Deploy rápido
+Sitio personal: quién soy, experiencia, proyectos, stack, certificaciones y contacto.
 
-Doble click en `index.html` — funciona directamente desde el browser. Sin servidor, sin build.
+**▶ [portfolio.spingola.com.ar](https://portfolio.spingola.com.ar)** · [CV](https://portfolio.spingola.com.ar/cv/)
+
+![Portada](docs/portada.png)
+
+## Cómo está hecho
+
+- **HTML, CSS y JavaScript sin framework ni build.** Carga instantánea y cero dependencias que
+  mantener.
+- Navegación tipográfica a pantalla completa con paneles por sección y
+  respeto por `prefers-reduced-motion`.
+- CV imprimible en [`cv/`](cv/), servido como página propia.
+- Desplegado en **Vercel** con dominio propio.
 
 ## Estructura
 
 ```
-Portfolio Santino/
-├── index.html         ← abrir este
-├── styles/
-│   └── main.css
-├── js/
-│   └── main.js
-└── README.md
+index.html      la página
+styles/main.css estilos y tokens
+js/main.js      navegación, paneles y datos de certificaciones
+cv/             CV en HTML
 ```
 
-## Personalización frecuente
+## Correrlo
 
-### Actualizar progreso de certificaciones
+Abrir `index.html` en el navegador. No hace falta servidor ni instalación.
 
-En `js/main.js`, al inicio del archivo:
+---
 
-```js
-const CERTS = [
-  { name: "Claude 101", done: true, date: "ABR 2026" },   // ← cambiar a true cuando esté listo
-  ...
-];
-```
-
-Cambiar `done: false` a `done: true` en los cursos completados.
-La barra de progreso y el contador se actualizan automáticamente.
-
-### Agregar links de verificación
-
-```js
-const CERT_URLS = [
-  "https://link-certificado-1.com",
-  "https://link-certificado-2.com",
-  "#",  // ← pendiente
-  ...
-];
-```
-
-### Cambiar datos de contacto
-
-En `index.html`, buscar `santinospingola12@gmail.com` y reemplazar.
-
-## Deploy en producción
-
-Cualquier hosting estático funciona:
-- **Netlify**: arrastrar la carpeta a netlify.com/drop
-- **Vercel**: `vercel --prod` desde la carpeta
-- **GitHub Pages**: subir y activar en Settings → Pages
-- **Hostinger**: subir via FTP a `public_html/`
+Proyectos destacados: [orbita-crm](https://github.com/SantinoSpingola/orbita-crm) ·
+[aula-plataforma-cursos](https://github.com/SantinoSpingola/aula-plataforma-cursos) ·
+[n8n-automatizaciones](https://github.com/SantinoSpingola/n8n-automatizaciones)
