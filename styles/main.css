@@ -400,6 +400,21 @@ html[data-mode="light"] .panel-logo { color:#151515; }
 .certs .date { opacity:.75; font-size:12px; }
 .note { margin-top:1em; font-size:12px !important; opacity:.8; }
 
+/* Capturas de un caso: ocupan todo el ancho, debajo de las columnas */
+.shots {
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:2vw;
+  margin:.5em 0 4em;
+}
+.shots figure { margin:0; }
+.shots img {
+  display:block; width:100%; height:auto;
+  border:1px solid color-mix(in srgb, var(--fg) 35%, transparent);
+}
+.shots figcaption { font-size:12px; opacity:.8; margin-top:.7em; }
+
 .u { background:linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition:background-size .4s var(--ease); padding-bottom:1px; }
 .u:hover { background-size:100% 1px; }
 
@@ -457,6 +472,8 @@ html[data-mode="light"] .panel-logo { color:#151515; }
   .info-status { display:flex; }
   .modes { grid-column:2; justify-self:start; }
   .copyright { margin-top:6px; }
+
+  .shots { grid-template-columns:1fr; gap:24px; }
 
   .panel-top { grid-template-columns:1fr auto; padding:20px 0 16px; }
   .panel-logo { font-size:28px; line-height:24px; }

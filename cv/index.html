@@ -42,10 +42,11 @@
     font-size:11pt; color:var(--accent); font-weight:600;
     margin-top:1px; margin-bottom:6px;
   }
-  .contact{ font-size:9.3pt; color:var(--mute); }
+  .contact{ font-size:9.3pt; color:var(--mute); text-align:left; }
+  .contact a{ white-space:nowrap; }
   .contact a{ color:var(--mute); text-decoration:none; }
   .contact a:hover{ text-decoration:underline; }
-  .contact .sep{ margin:0 5px; color:var(--rule); }
+  .contact .sep{ margin:0 3px; color:var(--rule); }
 
   /* ---------- Secciones ---------- */
   section{ margin-top:13px; }
@@ -137,25 +138,23 @@
 
   <header>
     <h1>Santino Spingola</h1>
-    <p class="role">Desarrollador de IA Aplicada, Automatización e Integraciones</p>
+    <p class="role">Desarrollador de Software · Arquitectura de Sistemas</p>
     <p class="contact">
-      Buenos Aires, Argentina<span class="sep">|</span><a
+      Buenos&nbsp;Aires,&nbsp;Argentina<span class="sep">|</span><a
         href="mailto:santinospingola12@gmail.com">santinospingola12@gmail.com</a><span class="sep">|</span><a
         href="tel:+541168792883">+54 11 6879-2883</a><span class="sep">|</span><a
         href="https://portfolio.spingola.com.ar">portfolio.spingola.com.ar</a><span class="sep">|</span><a
-        href="https://github.com/santinospingola">github.com/santinospingola</a>
+        href="https://github.com/SantinoSpingola">github.com/SantinoSpingola</a>
     </p>
   </header>
 
   <section>
     <h2>Perfil profesional</h2>
-    <p>Desarrollador especializado en llevar inteligencia artificial a sistemas de negocio en producción. Integro
-      modelos de lenguaje dentro de productos reales, con control de costos y una respuesta prevista para cuando el
-      proveedor llega a su límite. Automatizo procesos operativos y conecto entre sí los sistemas con los que una
-      empresa trabaja: gestión, CRM, ERP, facturación y mensajería, mediante APIs REST, SOAP, OAuth2 y webhooks. Más de
-      25 proyectos desarrollados entre sistemas propios en producción, integraciones para empresas cliente y
-      herramientas internas con IA. Trabajo de punta a punta: relevo el proceso con las áreas que van a usarlo,
-      desarrollo, despliego y capacito a los usuarios.</p>
+    <p>Desarrollador de software. Diseño y construyo sistemas de punta a punta: entiendo el problema junto a las
+      áreas que van a usarlo, defino la arquitectura, desarrollo, despliego y mantengo cada sistema en producción.
+      Más de 25 proyectos desarrollados entre sistemas propios en producción, integraciones para empresas cliente y
+      automatizaciones, con calidad verificable: pruebas automatizadas contra bases de datos reales y decisiones de
+      arquitectura documentadas.</p>
   </section>
 
   <section>
@@ -187,10 +186,10 @@
     <div class="proj">
       <div class="proj-head">
         <span class="proj-name">Órbita, plataforma de gestión comercial multiempresa</span>
-        <span class="proj-links">En producción</span>
+        <span class="proj-links">En producción · <a href="https://github.com/SantinoSpingola/orbita-crm">Repositorio</a></span>
       </div>
       <p class="proj-stack">Next.js, React, TypeScript, PostgreSQL, Supabase</p>
-      <p>Desarrollador único de punta a punta: 5 módulos, 35 tablas y 169 pruebas automatizadas. Cada empresa ve
+      <p>Desarrollador único de punta a punta: 7 módulos, 45 tablas y 500 pruebas automatizadas. Cada empresa ve
         solamente sus datos, y ese aislamiento lo aplica la base de datos y no el código de la aplicación: hay una
         prueba automatizada que intenta leer datos de otra empresa y verifica que el intento falle. Incluye el contact
         center de WhatsApp dentro del mismo sistema, con el pipeline comercial y el catálogo de productos. Capacito y
@@ -199,29 +198,37 @@
 
     <div class="proj">
       <div class="proj-head">
+        <span class="proj-name">Aula, plataforma de cursos y membresías autoalojada</span>
+        <span class="proj-links">En producción · <a href="https://github.com/SantinoSpingola/aula-plataforma-cursos">Repositorio</a></span>
+      </div>
+      <p class="proj-stack">Next.js, TypeScript, PostgreSQL, ffmpeg, Docker</p>
+      <p>Área de miembros estilo Hotmart Club en un VPS propio: video en HLS con links firmados atados a la sesión,
+        accesos que se activan solos por webhook de Mercado Pago, Stripe y Hotmart, mentorías en vivo y 1 a 1, y app
+        instalable con notificaciones. Migré más de 40 GB de cursos desde Hotmart con un importador idempotente.</p>
+    </div>
+
+    <div class="proj">
+      <div class="proj-head">
         <span class="proj-name">Asesor virtual con IA para inmobiliarias</span>
         <span class="proj-links"><a href="https://sistema-inmobiliarias.vercel.app">Demo</a> · <a
-            href="https://github.com/santinospingola/argensys-chatbot">Repositorio</a></span>
+            href="https://github.com/SantinoSpingola/argensys-chatbot">Repositorio</a></span>
       </div>
       <p class="proj-stack">Next.js, TypeScript, n8n</p>
-      <p>Agente conversacional que responde por disponibilidad de propiedades y condiciones de alquiler, agenda visitas
-        dentro de la misma conversación, analiza las imágenes que le manda el cliente y mantiene el contexto entre
-        mensajes. La lógica del agente vive en un flujo de n8n que la interfaz consume desde el servidor, así que
-        ajustar sus respuestas o los datos que consulta no requiere tocar código ni volver a desplegar.</p>
+      <p>Agente conversacional que responde por disponibilidad y condiciones de alquiler, agenda visitas, analiza las
+        imágenes que le manda el cliente y mantiene el contexto. La lógica vive en un flujo de n8n, así que ajustar sus
+        respuestas no requiere tocar código ni volver a desplegar.</p>
     </div>
 
     <div class="proj">
       <div class="proj-head">
         <span class="proj-name">Sistema de gestión para servicios de electricidad</span>
-        <span class="proj-links"><a href="https://github.com/santinospingola/gestion-starter">Repositorio de la
+        <span class="proj-links"><a href="https://github.com/SantinoSpingola/gestion-starter">Repositorio de la
             base</a></span>
       </div>
       <p class="proj-stack">Next.js, TypeScript, PostgreSQL</p>
-      <p>Clientes con sus direcciones, catálogo de materiales, presupuestos y agenda de trabajos. El presupuesto congela
-        el precio y la descripción de cada material en el momento de emitirlo, así una actualización de precios no
-        cambia lo que ya se le presupuestó a un cliente. Los trabajos avanzan por estados de programado a en curso y
-        hecho. Está construido sobre una base multiempresa propia que reutilizo entre sistemas, con la identidad, los
-        permisos y el aislamiento de datos ya resueltos.</p>
+      <p>Clientes, catálogo de materiales, presupuestos y agenda de trabajos. El presupuesto congela el precio de cada
+        material al emitirlo, así una actualización de precios no cambia lo ya presupuestado. Construido sobre una base
+        multiempresa propia que reutilizo entre sistemas.</p>
     </div>
   </section>
 
@@ -231,10 +238,13 @@
       producto, agentes conversacionales, ingeniería de prompts.</p>
     <p class="skill"><span class="skill-label">Lenguajes y frameworks:</span> Python, TypeScript, JavaScript, Node.js,
       FastAPI, Next.js, React, Tailwind.</p>
-    <p class="skill"><span class="skill-label">Bases de datos:</span> PostgreSQL, SQL, modelado de datos.</p>
+    <p class="skill"><span class="skill-label">Arquitectura:</span> monolito modular, ports &amp; adapters,
+      multi-tenancy con RLS, event bus con outbox, decisiones documentadas (ADRs).</p>
+    <p class="skill"><span class="skill-label">Bases de datos:</span> PostgreSQL, SQL, Redis, modelado de datos.</p>
     <p class="skill"><span class="skill-label">Integraciones y automatización:</span> APIs REST, SOAP, webhooks, OAuth2,
-      n8n, Bitrix24.</p>
-    <p class="skill"><span class="skill-label">Infraestructura:</span> Docker, Vercel, Supabase, Git.</p>
+      n8n, Bitrix24, WhatsApp, pasarelas de pago.</p>
+    <p class="skill"><span class="skill-label">Infraestructura:</span> VPS Linux, Docker Compose, Caddy, Vercel,
+      Supabase, Git.</p>
     <p class="skill"><span class="skill-label">Trabajo con clientes:</span> relevamiento de requerimientos, estimación,
       capacitación de usuarios, puesta en producción y soporte.</p>
   </section>
